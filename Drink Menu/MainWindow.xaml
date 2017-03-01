@@ -5,8 +5,33 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Drink_Menu"
         mc:Ignorable="d"
-        Title="MainWindow" Height="350" Width="525">
-    <Grid>
-        
-    </Grid>
+        Title="MainWindow" Height="720" Width="480">
+    <StackPanel HorizontalAlignment="Left" Height="720" VerticalAlignment="Top" Width="470" Margin="0,0,0,-31">
+        <StackPanel HorizontalAlignment="Left" Height="50" VerticalAlignment="Top" Width="470" Orientation="Horizontal">
+            <TextBlock x:Name="textBlock" HorizontalAlignment="Left" Height="50" TextWrapping="Wrap" Text="Restaurant Name" Width="319" FontFamily="Segoe UI Black" FontSize="36" Foreground="#FF630C0C" Panel.ZIndex="-2" Margin="0" Background="Black"/>
+            <Button x:Name="button" Content="Button" Height="50" VerticalAlignment="Top" Width="60"/>
+            <Button x:Name="button_Copy" Content="Button" Height="50" VerticalAlignment="Top" Width="93"/>
+        </StackPanel>
+        <StackPanel HorizontalAlignment="Left" Height="637" Width="470" Orientation="Horizontal">
+            <StackPanel Height="637" Margin="0,0,0,0" VerticalAlignment="Top" Width="35">
+                <Button x:Name="button1" Content="Button" HorizontalAlignment="Left" Height="212" Width="35"/>
+                <Button x:Name="button1_Copy" Content="Button" HorizontalAlignment="Left" Height="203" Width="35"/>
+                <Button x:Name="button1_Copy1" Content="Button" HorizontalAlignment="Left" Height="224" Width="35"/>
+            </StackPanel>
+            <ListBox x:Name="listBox" Height="637" Margin="0,0,0,0" VerticalAlignment="Top" Width="435">
+                <ListBox.ItemTemplate>
+                    <DataTemplate>
+                        <StackPanel Orientation="Horizontal">
+                            <Image x:Name="itemimage" HorizontalAlignment="Left" Height="88" Margin="0,0,0,0" Width="58"/>
+                            <StackPanel Orientation="Vertical">
+                                <TextBlock x:Name="itemName" HorizontalAlignment="Left" Height="88" Margin="0,0,0,0" Width="58"/>
+                                <TextBlock x:Name="itemPrices" HorizontalAlignment="Left" Height="88" Margin="0,0,0,0" Width="58"/>
+                            </StackPanel>
+                        </StackPanel>
+                    </DataTemplate>
+                </ListBox.ItemTemplate>
+            </ListBox>
+        </StackPanel>
+    </StackPanel>
+
 </Window>
