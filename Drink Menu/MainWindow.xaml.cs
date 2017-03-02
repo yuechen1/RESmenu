@@ -23,6 +23,18 @@ namespace Drink_Menu
         public MainWindow()
         {
             InitializeComponent();
+            List<DrinkItem> items = new List<DrinkItem>();
+            items.Add(new DrinkItem { Image = null, DrinkName = "suger water", price12 = "8.00", price16 = "10.00"});
+            items.Add(new DrinkItem { Image = null, DrinkName = "Water", price12 = "8.00", price16 = "10.00" });
+            DrinkBox.ItemsSource = items;
+        }
+
+        public class DrinkItem
+        {
+            public string Image { get; set; }
+            public string DrinkName { get; set; }
+            public string price12 { get; set; }
+            public string price16 { get; set; }
         }
     }
 }

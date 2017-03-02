@@ -13,24 +13,63 @@
             <Button x:Name="button_Copy" Content="Button" Height="50" VerticalAlignment="Top" Width="93"/>
         </StackPanel>
         <StackPanel HorizontalAlignment="Left" Height="637" Width="470" Orientation="Horizontal">
-            <StackPanel Height="637" Margin="0,0,0,0" VerticalAlignment="Top" Width="35">
-                <Button x:Name="button1" Content="Button" HorizontalAlignment="Left" Height="212" Width="35"/>
-                <Button x:Name="button1_Copy" Content="Button" HorizontalAlignment="Left" Height="203" Width="35"/>
-                <Button x:Name="button1_Copy1" Content="Button" HorizontalAlignment="Left" Height="224" Width="35"/>
-            </StackPanel>
-            <ListBox x:Name="listBox" Height="637" Margin="0,0,0,0" VerticalAlignment="Top" Width="435">
-                <ListBox.ItemTemplate>
-                    <DataTemplate>
-                        <StackPanel Orientation="Horizontal">
-                            <Image x:Name="itemimage" HorizontalAlignment="Left" Height="88" Margin="0,0,0,0" Width="58"/>
-                            <StackPanel Orientation="Vertical">
-                                <TextBlock x:Name="itemName" HorizontalAlignment="Left" Height="88" Margin="0,0,0,0" Width="58"/>
-                                <TextBlock x:Name="itemPrices" HorizontalAlignment="Left" Height="88" Margin="0,0,0,0" Width="58"/>
-                            </StackPanel>
-                        </StackPanel>
-                    </DataTemplate>
-                </ListBox.ItemTemplate>
-            </ListBox>
+            <TabControl x:Name="tabControl" Height="627" VerticalAlignment="Top" Width="470" TabStripPlacement="Left">
+                <TabControl.Resources>
+                    <Style TargetType="{x:Type TabItem}">
+                        <Setter Property="HeaderTemplate">
+                            <Setter.Value>
+                                <DataTemplate>
+                                    <ContentPresenter Content="{TemplateBinding Content}">
+                                        <ContentPresenter.LayoutTransform>
+                                            <RotateTransform Angle="270" />
+                                        </ContentPresenter.LayoutTransform>
+                                    </ContentPresenter>
+                                </DataTemplate>
+                            </Setter.Value>
+                        </Setter>
+                        <Setter Property="Padding" Value="3" />
+                    </Style>
+                </TabControl.Resources>
+                <TabItem Header="Drinks" Margin="0,0,0,0" Height="175" VerticalAlignment="Top">
+                    <Grid Background="#FFE5E5E5">
+                        <ListBox Name="DrinkBox" HorizontalAlignment="Left" Height="621" VerticalAlignment="Top" Width="440" Grid.ColumnSpan="2">
+                            <ListBox.ItemTemplate>
+                                <DataTemplate>
+                                    <StackPanel HorizontalAlignment="Left" Height="100" Width="310" Orientation="Horizontal">
+                                            <Image Source="{Binding Image}" Height="100" Width="100"/>
+                                            <StackPanel HorizontalAlignment="Left" Height="100" Width="210" Orientation="Vertical">
+                                                <TextBlock Text="{Binding DrinkName}" FontWeight="Bold"/>
+                                                <StackPanel HorizontalAlignment="Left" Height="100" Width="210" Orientation="Horizontal">
+                                                    <TextBlock Text="12oz: $"/>
+                                                    <TextBlock Text="{Binding price12}"/>
+                                                    <TextBlock Text="   16oz: $"/>
+                                                    <TextBlock Text="{Binding price16}"/>
+                                                </StackPanel>
+                                            </StackPanel>
+                                        </StackPanel>
+                                </DataTemplate>
+                            </ListBox.ItemTemplate>
+                        </ListBox>
+                    </Grid>
+                </TabItem>
+                <TabItem Header="Food" Margin="0,1,-2,-148" Height="175" VerticalAlignment="Top">
+                    <Grid Background="#FFE5E5E5">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="443*"/>
+                            <RowDefinition Height="193*"/>
+                        </Grid.RowDefinitions>
+                    </Grid>
+                </TabItem>
+                <TabItem Header="Special" Margin="0,0,0,0" Height="175" VerticalAlignment="Top">
+                    <Grid Background="#FFE5E5E5">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="515*"/>
+                            <RowDefinition Height="29*"/>
+                            <RowDefinition Height="77*"/>
+                        </Grid.RowDefinitions>
+                    </Grid>
+                </TabItem>
+            </TabControl>
         </StackPanel>
     </StackPanel>
 
