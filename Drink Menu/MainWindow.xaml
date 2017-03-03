@@ -35,11 +35,12 @@
                         <ListBox Name="DrinkBox" HorizontalAlignment="Left" Height="621" VerticalAlignment="Top" Width="440" Grid.ColumnSpan="2">
                             <ListBox.ItemTemplate>
                                 <DataTemplate>
-                                    <StackPanel HorizontalAlignment="Left" Height="100" Width="310" Orientation="Horizontal">
-                                            <Image Source="{Binding Image}" Height="100" Width="100"/>
-                                            <StackPanel HorizontalAlignment="Left" Height="100" Width="210" Orientation="Vertical">
+                                    <StackPanel HorizontalAlignment="Left" Height="100" Width="440" Orientation="Horizontal">
+                                        <StackPanel HorizontalAlignment="Left" Height="100" Width="220" Orientation="Horizontal">
+                                            <Image Source="{Binding Image}" Height="100" Width="50"/>
+                                            <StackPanel HorizontalAlignment="Left" Height="100" Width="170" Orientation="Vertical">
                                                 <TextBlock Text="{Binding DrinkName}" FontWeight="Bold"/>
-                                                <StackPanel HorizontalAlignment="Left" Height="100" Width="210" Orientation="Horizontal">
+                                                <StackPanel HorizontalAlignment="Left" Height="100" Width="170" Orientation="Horizontal">
                                                     <TextBlock Text="12oz: $"/>
                                                     <TextBlock Text="{Binding price12}"/>
                                                     <TextBlock Text="   16oz: $"/>
@@ -47,6 +48,19 @@
                                                 </StackPanel>
                                             </StackPanel>
                                         </StackPanel>
+                                        <StackPanel HorizontalAlignment="Left" Height="100" Width="220" Orientation="Horizontal">
+                                            <Image Source="{Binding Image}" Height="100" Width="50"/>
+                                            <StackPanel HorizontalAlignment="Left" Height="100" Width="170" Orientation="Vertical">
+                                                <TextBlock Text="{Binding DrinkName}" FontWeight="Bold"/>
+                                                <StackPanel HorizontalAlignment="Left" Height="100" Width="170" Orientation="Horizontal">
+                                                    <TextBlock Text="12oz: $"/>
+                                                    <TextBlock Text="{Binding price12}"/>
+                                                    <TextBlock Text="   16oz: $"/>
+                                                    <TextBlock Text="{Binding price16}"/>
+                                                </StackPanel>
+                                            </StackPanel>
+                                        </StackPanel>
+                                    </StackPanel>
                                 </DataTemplate>
                             </ListBox.ItemTemplate>
                         </ListBox>

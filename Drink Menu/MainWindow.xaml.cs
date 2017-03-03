@@ -23,10 +23,20 @@ namespace Drink_Menu
         public MainWindow()
         {
             InitializeComponent();
-            List<DrinkItem> items = new List<DrinkItem>();
-            items.Add(new DrinkItem { Image = null, DrinkName = "suger water", price12 = "8.00", price16 = "10.00"});
-            items.Add(new DrinkItem { Image = null, DrinkName = "Water", price12 = "8.00", price16 = "10.00" });
+            List<Drinkdisplay> items = new List<Drinkdisplay>();
+            items.Add(new Drinkdisplay { D1 = new DrinkItem { Image = null, DrinkName = "suger water", price12 = "8.00", price16 = "10.00" }, D2 = new DrinkItem { Image = null, DrinkName = "Water", price12 = "8.00", price16 = "10.00" } });
+            items.Add(new Drinkdisplay { D1 = new DrinkItem { Image = null, DrinkName = "suger water", price12 = "8.00", price16 = "10.00" }, D2 = new DrinkItem { Image = null, DrinkName = "Water", price12 = "8.00", price16 = "10.00" } });
+            items.Add(new Drinkdisplay { D1 = new DrinkItem { Image = null, DrinkName = "suger water", price12 = "8.00", price16 = "10.00" }, D2 = new DrinkItem { Image = null, DrinkName = "Water", price12 = "8.00", price16 = "10.00" } });
+            items.Add(new Drinkdisplay { D1 = new DrinkItem { Image = null, DrinkName = "suger water", price12 = "8.00", price16 = "10.00" }, D2 = new DrinkItem { Image = null, DrinkName = "Water", price12 = "8.00", price16 = "10.00" } });
+            items.Add(new Drinkdisplay { D1 = new DrinkItem { Image = null, DrinkName = "suger water", price12 = "8.00", price16 = "10.00" }, D2 = new DrinkItem { Image = null, DrinkName = "Water", price12 = "8.00", price16 = "10.00" } });
+            items.Add(new Drinkdisplay { D1 = new DrinkItem { Image = null, DrinkName = "suger water", price12 = "8.00", price16 = "10.00" }, D2 = new DrinkItem { Image = null, DrinkName = "Water", price12 = "8.00", price16 = "10.00" } });
             DrinkBox.ItemsSource = items;
+        }
+
+        public class Drinkdisplay
+        {
+            public DrinkItem D1 { get; set; }
+            public DrinkItem D2 { get; set; }
         }
 
         public class DrinkItem
