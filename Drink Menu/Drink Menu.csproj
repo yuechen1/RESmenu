@@ -62,6 +62,18 @@
     <Compile Include="FoodMod.xaml.cs">
       <DependentUpon>FoodMod.xaml</DependentUpon>
     </Compile>
+    <Compile Include="DrinkAdd.xaml.cs">
+      <DependentUpon>DrinkAdd.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="FoodAdd.xaml.cs">
+      <DependentUpon>FoodAdd.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Sides.xaml.cs">
+      <DependentUpon>Sides.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Bill.xaml.cs">
+      <DependentUpon>Bill.xaml</DependentUpon>
+    </Compile>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -75,6 +87,22 @@
       <SubType>Code</SubType>
     </Compile>
     <Page Include="FoodMod.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="DrinkAdd.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="FoodAdd.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Sides.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Bill.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
