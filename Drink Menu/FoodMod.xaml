@@ -35,10 +35,19 @@
                 <TabItem Header="Special" Margin="0,0,0,0" Height="175" VerticalAlignment="Top"/>
             </TabControl>
             <Grid Height="720" Margin="0,0,0,-83" VerticalAlignment="Top" Width="440">
-                <TextBlock x:Name="textBlock1" HorizontalAlignment="Left" Height="168" Margin="252,205,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" Width="154"/>
-                <ListBox x:Name="listBox" HorizontalAlignment="Left" Height="458" Margin="31,52,0,0" VerticalAlignment="Top" Width="193"/>
-                <Button x:Name="button1" Content="Button" HorizontalAlignment="Left" Height="39" Margin="31,535,0,0" VerticalAlignment="Top" Width="39"/>
-                <Button x:Name="button1_Copy" Content="Button" HorizontalAlignment="Left" Height="39" Margin="350,535,0,0" VerticalAlignment="Top" Width="39"/>
+                <TextBlock x:Name="textBlock1" HorizontalAlignment="Left" Height="168" Margin="252,205,0,0" TextWrapping="Wrap" Text="{Binding discreption}" VerticalAlignment="Top" Width="154"/>
+                <ListBox x:Name="listBox" HorizontalAlignment="Left" Height="458" Margin="31,52,0,0" VerticalAlignment="Top" Width="200">
+                    <ListBox.ItemTemplate>
+                        <DataTemplate>
+                            <StackPanel HorizontalAlignment="Left" Height="40" Width="200" Orientation="Horizontal">
+                                <TextBlock x:Name="contentname" Text="{Binding Name}" Width="140"/>
+                                <Button x:Name="something" Content="remove" Width="60"/>
+                            </StackPanel>
+                        </DataTemplate>
+                    </ListBox.ItemTemplate>
+                </ListBox>
+                <Button x:Name="button1" Content="Back" HorizontalAlignment="Left" Height="39" Margin="31,535,0,0" VerticalAlignment="Top" Width="39"/>
+                <Button x:Name="button1_Copy" Content="Add" HorizontalAlignment="Left" Height="39" Margin="350,535,0,0" VerticalAlignment="Top" Width="39"/>
                 <TabControl x:Name="ItemImage" HorizontalAlignment="Left" Height="149" Margin="252,52,0,0" VerticalAlignment="Top" Width="166" TabStripPlacement="Bottom">
                     <TabItem Header="Image1">
                         <Grid Background="#FFE5E5E5"/>
@@ -47,8 +56,8 @@
                         <Grid Background="#FFE5E5E5" />
                     </TabItem>
                 </TabControl>
-                <TextBlock x:Name="textBlock2" HorizontalAlignment="Left" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" Height="34" Width="100"/>
-                <TextBlock x:Name="textBlock1_Copy" HorizontalAlignment="Left" Height="63" Margin="252,397,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" Width="154"/>
+                <TextBlock x:Name="textBlock2" HorizontalAlignment="Left" TextWrapping="Wrap" Text="{Binding Name}" VerticalAlignment="Top" Height="34" Width="100" FontSize="36"/>
+                <TextBlock x:Name="alergy" Text="{Binding alergy}" HorizontalAlignment="Left" Height="63" Margin="252,397,0,0" VerticalAlignment="Top" Width="154"/>
             </Grid>
         </StackPanel>
     </StackPanel>

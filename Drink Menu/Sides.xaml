@@ -36,9 +36,36 @@
             </TabControl>
             <Grid Height="720" Margin="0,0,0,-83" VerticalAlignment="Top" Width="440">
                 <TextBlock x:Name="textBlock1" HorizontalAlignment="Left" Height="46" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" Width="440"/>
-                <ListBox x:Name="listBox" HorizontalAlignment="Left" Height="472" Margin="0,51,0,0" VerticalAlignment="Top" Width="440"/>
-                <Button x:Name="button1" Content="Button" HorizontalAlignment="Left" Height="37" Margin="33,539,0,0" VerticalAlignment="Top" Width="58"/>
-                <Button x:Name="button1_Copy" Content="Button" HorizontalAlignment="Left" Height="37" Margin="346,539,0,0" VerticalAlignment="Top" Width="58"/>
+                <ListBox x:Name="listBox" HorizontalAlignment="Left" Height="472" Margin="0,51,0,0" VerticalAlignment="Top" Width="440">
+                    <ListBox.ItemTemplate>
+                        <DataTemplate>
+                            <StackPanel HorizontalAlignment="Left" Height="100" Width="440" Orientation="Horizontal">
+                                <StackPanel HorizontalAlignment="Left" Height="100" Width="220" Orientation="Horizontal">
+                                    <Image Source="{Binding Image}" Height="100" Width="50"/>
+                                    <StackPanel HorizontalAlignment="Left" Height="100" Width="170" Orientation="Vertical">
+                                        <TextBlock Text="{Binding Name}" FontWeight="Bold"/>
+                                        <StackPanel HorizontalAlignment="Left" Height="100" Width="170" Orientation="Horizontal">
+                                            <TextBlock Text="Price: $"/>
+                                            <TextBlock Text="{Binding price}"/>
+                                        </StackPanel>
+                                    </StackPanel>
+                                </StackPanel>
+                                <StackPanel HorizontalAlignment="Left" Height="100" Width="220" Orientation="Horizontal">
+                                    <Image Source="{Binding Image}" Height="100" Width="50"/>
+                                    <StackPanel HorizontalAlignment="Left" Height="100" Width="170" Orientation="Vertical">
+                                        <TextBlock Text="{Binding Name}" FontWeight="Bold"/>
+                                        <StackPanel HorizontalAlignment="Left" Height="100" Width="170" Orientation="Horizontal">
+                                            <TextBlock Text="Price: $"/>
+                                            <TextBlock Text="{Binding price}"/>
+                                        </StackPanel>
+                                    </StackPanel>
+                                </StackPanel>
+                            </StackPanel>
+                        </DataTemplate>
+                    </ListBox.ItemTemplate>
+                </ListBox>
+                <Button x:Name="button1" Content="Back" HorizontalAlignment="Left" Height="37" Margin="33,539,0,0" VerticalAlignment="Top" Width="58"/>
+                <Button x:Name="button1_Copy" Content="Add" HorizontalAlignment="Left" Height="37" Margin="346,539,0,0" VerticalAlignment="Top" Width="58"/>
 
             </Grid>
         </StackPanel>

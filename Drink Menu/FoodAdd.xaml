@@ -8,9 +8,19 @@
         Title="Window3" Height="500" Width="300">
     <Grid>
         <TextBlock x:Name="textBlock" HorizontalAlignment="Left" Height="35" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" Width="292"/>
-        <ListBox x:Name="listBox" HorizontalAlignment="Left" Height="373" Margin="0,40,0,0" VerticalAlignment="Top" Width="292"/>
-        <Button x:Name="button" Content="Button" HorizontalAlignment="Left" Height="29" Margin="24,430,0,0" VerticalAlignment="Top" Width="54"/>
-        <Button x:Name="button_Copy" Content="Button" HorizontalAlignment="Left" Height="29" Margin="218,430,0,0" VerticalAlignment="Top" Width="54"/>
+        <ListBox x:Name="listBox" HorizontalAlignment="Left" Height="373" Margin="0,40,0,0" VerticalAlignment="Top" Width="300">
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <StackPanel HorizontalAlignment="Left" Height="40" Width="300" Orientation="Horizontal">
+                        <CheckBox x:Name="checkBox" Content="{Binding Name}" Height="40" Width="40"/>
+                        <TextBlock x:Name="contentname" Text="{Binding Name}" Width="200"/>
+                        <TextBlock x:Name="contentprice" Text="{Binding Price}" Width="60"/>
+                    </StackPanel>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+        </ListBox>
+        <Button x:Name="button" Content="Back" HorizontalAlignment="Left" Height="29" Margin="24,430,0,0" VerticalAlignment="Top" Width="54"/>
+        <Button x:Name="button_Copy" Content="Add" HorizontalAlignment="Left" Height="29" Margin="218,430,0,0" VerticalAlignment="Top" Width="54"/>
 
     </Grid>
 </Window>

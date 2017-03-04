@@ -34,14 +34,36 @@
                 <TabItem Header="Food" Margin="0,1,-2,-148" Height="175" VerticalAlignment="Top"/>
                 <TabItem Header="Special" Margin="0,0,0,0" Height="175" VerticalAlignment="Top"/>
             </TabControl>
-            <Grid Height="720" Margin="0,0,0,-83" VerticalAlignment="Top" Width="440">
+            <Grid Height="637" VerticalAlignment="Top" Width="440">
                 <Button x:Name="button1" Content="Button" HorizontalAlignment="Left" Height="46" Margin="348,0,0,0" VerticalAlignment="Top" Width="82"/>
-                <TextBlock x:Name="textBlock1" HorizontalAlignment="Left" Height="46" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" Width="247"/>
-                <ListBox x:Name="listBox" HorizontalAlignment="Left" Height="389" Margin="10,51,0,0" VerticalAlignment="Top" Width="354"/>
-                <TextBlock x:Name="textBlock2" HorizontalAlignment="Left" Height="101" Margin="237,440,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" Width="127"/>
+                <TextBlock x:Name="textBlock1" HorizontalAlignment="Left" Height="46" TextWrapping="Wrap" VerticalAlignment="Top" Width="247"><Run FontSize="36" Text="Table #1"/></TextBlock>
+                <ListBox x:Name="pricebox" HorizontalAlignment="Left" Height="389" Margin="10,51,0,0" VerticalAlignment="Top" Width="354">
+                    <ListBox.ItemTemplate>
+                        <DataTemplate>
+                            <StackPanel HorizontalAlignment="Left" Height="40" Width="354" Orientation="Horizontal">
+                                <TextBlock Text="{Binding Name}" HorizontalAlignment="Left"/>
+                                <TextBlock Text="{Binding Price}" HorizontalAlignment="Right"/>
+                            </StackPanel>
+                        </DataTemplate>
+                    </ListBox.ItemTemplate>
+                </ListBox>
                 <Button x:Name="button2" Content="Button" HorizontalAlignment="Left" Height="42" Margin="0,590,0,0" VerticalAlignment="Top" Width="57"/>
                 <Button x:Name="button2_Copy" Content="Button" HorizontalAlignment="Left" Height="42" Margin="373,590,0,0" VerticalAlignment="Top" Width="57"/>
                 <Button x:Name="button2_Copy1" Content="Button" HorizontalAlignment="Left" Height="42" Margin="316,590,0,0" VerticalAlignment="Top" Width="57"/>
+                <StackPanel HorizontalAlignment="Left" Height="120" Margin="247,445,0,0" VerticalAlignment="Top" Width="120">
+                    <StackPanel HorizontalAlignment="Left" Height="40" Width="120" VerticalAlignment="Top" Orientation="Horizontal">
+                        <TextBlock Text="Sub Total: " Height="40"/>
+                        <TextBlock x:Name="view_subtotal" Text="{Binding subtotal}" Height="40"/>
+                    </StackPanel>
+                    <StackPanel HorizontalAlignment="Left" Height="40" Width="120" VerticalAlignment="Top" Orientation="Horizontal">
+                        <TextBlock Text="     Tax: " Height="40"/>
+                        <TextBlock x:Name="view_tax" Text="{Binding tax}" Height="40"/>
+                    </StackPanel>
+                    <StackPanel HorizontalAlignment="Left" Height="40" Width="120" VerticalAlignment="Top" Orientation="Horizontal">
+                        <TextBlock Text="    Total: " Height="40"/>
+                        <TextBlock x:Name="view_finaltotal"  Text="{Binding finaltotal}" Height="40"/>
+                    </StackPanel>
+                </StackPanel>
 
             </Grid>
         </StackPanel>

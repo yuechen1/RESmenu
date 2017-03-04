@@ -39,7 +39,7 @@
                                         <StackPanel HorizontalAlignment="Left" Height="100" Width="220" Orientation="Horizontal">
                                             <Image Source="{Binding Image}" Height="100" Width="50"/>
                                             <StackPanel HorizontalAlignment="Left" Height="100" Width="170" Orientation="Vertical">
-                                                <TextBlock Text="{Binding DrinkName}" FontWeight="Bold"/>
+                                                <TextBlock Text="{Binding Name}" FontWeight="Bold"/>
                                                 <StackPanel HorizontalAlignment="Left" Height="100" Width="170" Orientation="Horizontal">
                                                     <TextBlock Text="12oz: $"/>
                                                     <TextBlock Text="{Binding price12}"/>
@@ -51,7 +51,7 @@
                                         <StackPanel HorizontalAlignment="Left" Height="100" Width="220" Orientation="Horizontal">
                                             <Image Source="{Binding Image}" Height="100" Width="50"/>
                                             <StackPanel HorizontalAlignment="Left" Height="100" Width="170" Orientation="Vertical">
-                                                <TextBlock Text="{Binding DrinkName}" FontWeight="Bold"/>
+                                                <TextBlock Text="{Binding Name}" FontWeight="Bold"/>
                                                 <StackPanel HorizontalAlignment="Left" Height="100" Width="170" Orientation="Horizontal">
                                                     <TextBlock Text="12oz: $"/>
                                                     <TextBlock Text="{Binding price12}"/>
