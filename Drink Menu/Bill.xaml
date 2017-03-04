@@ -5,15 +5,15 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Drink_Menu"
         mc:Ignorable="d"
-        Title="Window5" Height="720" Width="480">
+        Title="BillWindow" Height="720" Width="480">
     <StackPanel HorizontalAlignment="Left" Height="720" VerticalAlignment="Top" Width="480" Margin="0,0,0,-31">
         <StackPanel HorizontalAlignment="Left" Height="50" VerticalAlignment="Top" Width="470" Orientation="Horizontal">
-            <TextBlock x:Name="textBlock" HorizontalAlignment="Left" Height="50" TextWrapping="Wrap" Text="Restaurant Name" Width="319" FontFamily="Segoe UI Black" FontSize="36" Foreground="#FF630C0C" Panel.ZIndex="-2" Margin="0" Background="Black"/>
-            <Button x:Name="button" Content="Button" Height="50" VerticalAlignment="Top" Width="60"/>
-            <Button x:Name="button_Copy" Content="Button" Height="50" VerticalAlignment="Top" Width="93"/>
+            <TextBlock x:Name="txtRestName" HorizontalAlignment="Left" Height="50" TextWrapping="Wrap" Text="Restaurant Name" Width="319" FontFamily="Segoe UI Black" FontSize="36" Foreground="#FF630C0C" Panel.ZIndex="-2" Margin="0" Background="Black"/>
+            <Button x:Name="btnCall" Content="Call" Height="50" VerticalAlignment="Top" Width="60"/>
+            <Button x:Name="btnBill" Content="Bill" Height="50" VerticalAlignment="Top" Width="93"/>
         </StackPanel>
         <StackPanel HorizontalAlignment="Left" Height="637" Width="470" Orientation="Horizontal">
-            <TabControl x:Name="tabControl" Height="720" VerticalAlignment="Top" Width="30" TabStripPlacement="Left" Margin="0,0,0,-59">
+            <TabControl x:Name="tabControl" Height="637" VerticalAlignment="Top" Width="30" TabStripPlacement="Left">
                 <TabControl.Resources>
                     <Style TargetType="{x:Type TabItem}">
                         <Setter Property="HeaderTemplate">
@@ -31,13 +31,13 @@
                     </Style>
                 </TabControl.Resources>
                 <TabItem Header="Drinks" Margin="0,0,0,0" Height="175" VerticalAlignment="Top"/>
-                <TabItem Header="Food" Margin="0,1,-2,-148" Height="175" VerticalAlignment="Top"/>
+                <TabItem Header="Food" Margin="0,0,0,0" Height="175" VerticalAlignment="Top"/>
                 <TabItem Header="Special" Margin="0,0,0,0" Height="175" VerticalAlignment="Top"/>
             </TabControl>
             <Grid Height="637" VerticalAlignment="Top" Width="440">
-                <Button x:Name="button1" Content="Button" HorizontalAlignment="Left" Height="46" Margin="348,0,0,0" VerticalAlignment="Top" Width="82"/>
-                <TextBlock x:Name="textBlock1" HorizontalAlignment="Left" Height="46" TextWrapping="Wrap" VerticalAlignment="Top" Width="247"><Run FontSize="36" Text="Table #1"/></TextBlock>
-                <ListBox x:Name="pricebox" HorizontalAlignment="Left" Height="389" Margin="10,51,0,0" VerticalAlignment="Top" Width="354">
+                <Button x:Name="btnSplit" Content="Split Bill" HorizontalAlignment="Left" Height="46" Margin="348,0,0,0" VerticalAlignment="Top" Width="82"/>
+                <TextBlock x:Name="txtTableNumber" HorizontalAlignment="Left" Height="46" TextWrapping="Wrap" VerticalAlignment="Top" Width="247"><Run FontSize="36" Text="Table #1"/></TextBlock>
+                <ListBox x:Name="lbxPriceBox" HorizontalAlignment="Left" Height="389" Margin="10,51,0,0" VerticalAlignment="Top" Width="354">
                     <ListBox.ItemTemplate>
                         <DataTemplate>
                             <StackPanel HorizontalAlignment="Left" Height="40" Width="354" Orientation="Horizontal">
@@ -47,20 +47,20 @@
                         </DataTemplate>
                     </ListBox.ItemTemplate>
                 </ListBox>
-                <Button x:Name="button2" Content="Button" HorizontalAlignment="Left" Height="42" Margin="0,590,0,0" VerticalAlignment="Top" Width="57"/>
-                <Button x:Name="button2_Copy" Content="Button" HorizontalAlignment="Left" Height="42" Margin="373,590,0,0" VerticalAlignment="Top" Width="57"/>
-                <Button x:Name="button2_Copy1" Content="Button" HorizontalAlignment="Left" Height="42" Margin="316,590,0,0" VerticalAlignment="Top" Width="57"/>
+                <Button x:Name="btnBillBack" Content="Back" HorizontalAlignment="Left" Height="42" Margin="0,590,0,0" VerticalAlignment="Top" Width="57"/>
+                <Button x:Name="btnCash" Content="Pay with Cash" HorizontalAlignment="Left" Height="42" Margin="373,590,0,0" VerticalAlignment="Top" Width="57"/>
+                <Button x:Name="btnCard" Content="Pay with Debit/Credit" HorizontalAlignment="Left" Height="42" Margin="316,590,0,0" VerticalAlignment="Top" Width="57"/>
                 <StackPanel HorizontalAlignment="Left" Height="120" Margin="247,445,0,0" VerticalAlignment="Top" Width="120">
-                    <StackPanel HorizontalAlignment="Left" Height="40" Width="120" VerticalAlignment="Top" Orientation="Horizontal">
-                        <TextBlock Text="Sub Total: " Height="40"/>
+                    <StackPanel HorizontalAlignment="Right" Height="40" Width="120" VerticalAlignment="Top" Orientation="Horizontal">
+                        <TextBlock Text=" Subtotal: " Height="40"/>
                         <TextBlock x:Name="view_subtotal" Text="{Binding subtotal}" Height="40"/>
                     </StackPanel>
-                    <StackPanel HorizontalAlignment="Left" Height="40" Width="120" VerticalAlignment="Top" Orientation="Horizontal">
-                        <TextBlock Text="     Tax: " Height="40"/>
+                    <StackPanel HorizontalAlignment="Right" Height="40" Width="120" VerticalAlignment="Top" Orientation="Horizontal">
+                        <TextBlock Text="          Tax: " Height="40"/>
                         <TextBlock x:Name="view_tax" Text="{Binding tax}" Height="40"/>
                     </StackPanel>
-                    <StackPanel HorizontalAlignment="Left" Height="40" Width="120" VerticalAlignment="Top" Orientation="Horizontal">
-                        <TextBlock Text="    Total: " Height="40"/>
+                    <StackPanel HorizontalAlignment="Right" Height="40" Width="120" VerticalAlignment="Top" Orientation="Horizontal">
+                        <TextBlock Text="       Total: " Height="40"/>
                         <TextBlock x:Name="view_finaltotal"  Text="{Binding finaltotal}" Height="40"/>
                     </StackPanel>
                 </StackPanel>

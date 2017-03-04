@@ -5,15 +5,15 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Drink_Menu"
         mc:Ignorable="d"
-        Title="Window4" Height="720" Width="480">
+        Title="sideWindow" Height="720" Width="480">
     <StackPanel HorizontalAlignment="Left" Height="720" VerticalAlignment="Top" Width="480" Margin="0,0,0,-31">
         <StackPanel HorizontalAlignment="Left" Height="50" VerticalAlignment="Top" Width="470" Orientation="Horizontal">
-            <TextBlock x:Name="textBlock" HorizontalAlignment="Left" Height="50" TextWrapping="Wrap" Text="Restaurant Name" Width="319" FontFamily="Segoe UI Black" FontSize="36" Foreground="#FF630C0C" Panel.ZIndex="-2" Margin="0" Background="Black"/>
-            <Button x:Name="button" Content="Button" Height="50" VerticalAlignment="Top" Width="60"/>
-            <Button x:Name="button_Copy" Content="Button" Height="50" VerticalAlignment="Top" Width="93"/>
+            <TextBlock x:Name="txtRestName" HorizontalAlignment="Left" Height="50" TextWrapping="Wrap" Text="Restaurant Name" Width="319" FontFamily="Segoe UI Black" FontSize="36" Foreground="#FF630C0C" Panel.ZIndex="-2" Margin="0" Background="Black"/>
+            <Button x:Name="btnCall" Content="Call" Height="50" VerticalAlignment="Top" Width="60"/>
+            <Button x:Name="btnBill" Content="Bill" Height="50" VerticalAlignment="Top" Width="93"/>
         </StackPanel>
         <StackPanel HorizontalAlignment="Left" Height="637" Width="470" Orientation="Horizontal">
-            <TabControl x:Name="tabControl" Height="720" VerticalAlignment="Top" Width="30" TabStripPlacement="Left" Margin="0,0,0,-59">
+            <TabControl x:Name="tabControl" Height="637" VerticalAlignment="Top" Width="30" TabStripPlacement="Left">
                 <TabControl.Resources>
                     <Style TargetType="{x:Type TabItem}">
                         <Setter Property="HeaderTemplate">
@@ -31,12 +31,12 @@
                     </Style>
                 </TabControl.Resources>
                 <TabItem Header="Drinks" Margin="0,0,0,0" Height="175" VerticalAlignment="Top"/>
-                <TabItem Header="Food" Margin="0,1,-2,-148" Height="175" VerticalAlignment="Top"/>
+                <TabItem Header="Food" Margin="0,0,0,0" Height="175" VerticalAlignment="Top"/>
                 <TabItem Header="Special" Margin="0,0,0,0" Height="175" VerticalAlignment="Top"/>
             </TabControl>
             <Grid Height="720" Margin="0,0,0,-83" VerticalAlignment="Top" Width="440">
-                <TextBlock x:Name="textBlock1" HorizontalAlignment="Left" Height="46" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" Width="440"/>
-                <ListBox x:Name="listBox" HorizontalAlignment="Left" Height="472" Margin="0,51,0,0" VerticalAlignment="Top" Width="440">
+                <TextBlock x:Name="txtSide" HorizontalAlignment="Left" Height="46" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" Width="440"/>
+                <ListBox x:Name="lbxSideDisplay" HorizontalAlignment="Left" Height="472" Margin="0,51,0,0" VerticalAlignment="Top" Width="440">
                     <ListBox.ItemTemplate>
                         <DataTemplate>
                             <StackPanel HorizontalAlignment="Left" Height="100" Width="440" Orientation="Horizontal">
@@ -64,8 +64,8 @@
                         </DataTemplate>
                     </ListBox.ItemTemplate>
                 </ListBox>
-                <Button x:Name="button1" Content="Back" HorizontalAlignment="Left" Height="37" Margin="33,539,0,0" VerticalAlignment="Top" Width="58"/>
-                <Button x:Name="button1_Copy" Content="Add" HorizontalAlignment="Left" Height="37" Margin="346,539,0,0" VerticalAlignment="Top" Width="58"/>
+                <Button x:Name="btnSideBack" Content="Back" HorizontalAlignment="Left" Height="37" Margin="33,539,0,0" VerticalAlignment="Top" Width="58"/>
+                <Button x:Name="btnSideAdd" Content="Add" HorizontalAlignment="Left" Height="37" Margin="346,539,0,0" VerticalAlignment="Top" Width="58"/>
 
             </Grid>
         </StackPanel>
