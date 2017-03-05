@@ -22,14 +22,40 @@ namespace Drink_Menu
         public Window1()
         {
             InitializeComponent();
-        }
-    }
+			List<ingredient> recipe = new List<ingredient>();
+			recipe.Add(new ingredient { name = "Steak", price = "$25.00" });
+			recipe.Add(new ingredient { name = "Salt", price = "$0.00" });
+			recipe.Add(new ingredient { name = "Pepper", price = "$0.00" });
+			recipe.Add(new ingredient { name = "BBQ Sauce", price = "$0.00" });
 
-    public class Food
+			Food info = new Drink_Menu.Food { Image1 = null, Image2 = null, ingredients = recipe };
+			lbxIngredientList.ItemsSource = recipe;
+
+			string foodDesc = "Cooked medium rare, a staple of the Dancing Shamrock.";
+			txtFoodInfo.Text = foodDesc;
+			string foodName = "Steak";
+			txtFoodName.Text = foodName;
+			string allergy = "Non-vegetarian";
+			txtAllergies.Text = allergy;
+        }
+
+		private void btnModAdd_Click(object sender, RoutedEventArgs e)
+		{
+			Window4 sidesWindow = new Window4();
+			sidesWindow.Show();
+		}
+
+		private void btnModBack_Click(object sender, RoutedEventArgs e)
+		{
+			this.Close();
+		}
+	}
+
+	public class Food
     {
         public string Image1 { set; get; }
         public string Image2 { set; get; }
-        public List<ingredient> ingredients = new List<ingredient>();
+        public List<ingredient> ingredients { set; get; }
     }
 
     public class ingredient

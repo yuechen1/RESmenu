@@ -26,15 +26,20 @@ namespace Drink_Menu
         {
             InitializeComponent();
             List<Food1> items = new List<Food1>();
-            items.Add(new Drink_Menu.Food1 { Name = "idc", Price = "50.00" });
+            items.Add(new Drink_Menu.Food1 { Name = "Steak", Price = "$25.00" });
             lbxPriceBox.ItemsSource = items;
-            view_subtotal.Text = "n/a";
-            view_tax.Text = "n/a";
-            view_finaltotal.Text = "n/a";
+            view_subtotal.Text = "$25.00";
+            view_tax.Text = "$1.25";
+            view_finaltotal.Text = "$26.25";
         }
-    }
 
-    public class Food1
+		private void btnBillBack_Click(object sender, RoutedEventArgs e)
+		{
+			this.Close();
+		}
+	}
+
+	public class Food1
     {
         public string Name { get; set; }
         public string Price { get; set; }

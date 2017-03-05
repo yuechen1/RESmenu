@@ -8,9 +8,9 @@
         Title="BillWindow" Height="720" Width="480">
     <StackPanel HorizontalAlignment="Left" Height="720" VerticalAlignment="Top" Width="480" Margin="0,0,0,-31">
         <StackPanel HorizontalAlignment="Left" Height="50" VerticalAlignment="Top" Width="470" Orientation="Horizontal">
-            <TextBlock x:Name="txtRestName" HorizontalAlignment="Left" Height="50" TextWrapping="Wrap" Text="Restaurant Name" Width="319" FontFamily="Segoe UI Black" FontSize="36" Foreground="#FF630C0C" Panel.ZIndex="-2" Margin="0" Background="Black"/>
+            <TextBlock x:Name="txtRestName" HorizontalAlignment="Left" Height="50" TextWrapping="Wrap" Text="Dancing Shamrock" Width="319" FontFamily="Segoe UI Black" FontSize="34" Foreground="#FF630C0C" Panel.ZIndex="-2" Margin="0" Background="Black"/>
             <Button x:Name="btnCall" Content="Call" Height="50" VerticalAlignment="Top" Width="60"/>
-            <Button x:Name="btnBill" Content="Bill" Height="50" VerticalAlignment="Top" Width="93"/>
+            <Button x:Name="btnBill" Content="Bill" Height="50" VerticalAlignment="Top" Width="93" IsEnabled="False"/>
         </StackPanel>
         <StackPanel HorizontalAlignment="Left" Height="637" Width="470" Orientation="Horizontal">
             <TabControl x:Name="tabControl" Height="637" VerticalAlignment="Top" Width="30" TabStripPlacement="Left">
@@ -47,21 +47,21 @@
                         </DataTemplate>
                     </ListBox.ItemTemplate>
                 </ListBox>
-                <Button x:Name="btnBillBack" Content="Back" HorizontalAlignment="Left" Height="42" Margin="0,590,0,0" VerticalAlignment="Top" Width="57"/>
+                <Button x:Name="btnBillBack" Content="Back" HorizontalAlignment="Left" Height="42" Margin="0,590,0,0" VerticalAlignment="Top" Width="57" Click="btnBillBack_Click"/>
                 <Button x:Name="btnCash" Content="Pay with Cash" HorizontalAlignment="Left" Height="42" Margin="348,590,0,0" VerticalAlignment="Top" Width="82"/>
                 <Button x:Name="btnCard" Content="Pay with Debit/Credit" HorizontalAlignment="Left" Height="42" Margin="211,590,0,0" VerticalAlignment="Top" Width="137"/>
                 <StackPanel HorizontalAlignment="Left" Height="120" Margin="247,445,0,0" VerticalAlignment="Top" Width="120">
                     <StackPanel HorizontalAlignment="Right" Height="40" Width="120" VerticalAlignment="Top" Orientation="Horizontal">
                         <TextBlock Text="  Subtotal: " Height="40"/>
-                        <TextBlock x:Name="view_subtotal" Height="40"/>
+                        <TextBlock x:Name="view_subtotal" Height="40" HorizontalAlignment="Right"/>
                     </StackPanel>
                     <StackPanel HorizontalAlignment="Right" Height="40" Width="120" VerticalAlignment="Top" Orientation="Horizontal">
                         <TextBlock Text="          Tax: " Height="40"/>
-                        <TextBlock x:Name="view_tax" Height="40"/>
+                        <TextBlock x:Name="view_tax" Height="40" HorizontalAlignment="Right"/>
                     </StackPanel>
                     <StackPanel HorizontalAlignment="Right" Height="40" Width="120" VerticalAlignment="Top" Orientation="Horizontal">
                         <TextBlock Text="       Total: " Height="40"/>
-                        <TextBlock x:Name="view_finaltotal" Height="40"/>
+                        <TextBlock x:Name="view_finaltotal" Height="40" HorizontalAlignment="Right"/>
                     </StackPanel>
                 </StackPanel>
 

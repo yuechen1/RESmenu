@@ -33,6 +33,9 @@ namespace Drink_Menu
             items.Add(new Drinkdisplay { Image = null, Name = "suger water", price12 = "8.00", price16 = "10.00", Image_1 = null, Name_1 = "Water", price12_1 = "8.00", price16_1 = "10.00" });
             items.Add(new Drinkdisplay { Image = null, Name = "suger water", price12 = "8.00", price16 = "10.00", Image_1 = null, Name_1 = "Water", price12_1 = "8.00", price16_1 = "10.00" });
             DrinkBox.ItemsSource = items;
+
+			List<Drinkdisplay> meals = new List<Drinkdisplay>();
+
             FoodBox.ItemsSource = items;
         }
 
@@ -58,7 +61,7 @@ namespace Drink_Menu
 
         private void btnCall_Click(object sender, RoutedEventArgs e)
         {
-
+			MessageBox.Show("Waitstaff has been notified.", "Please wait");
         }
 
         private void btnBill_Click(object sender, RoutedEventArgs e)
@@ -66,5 +69,17 @@ namespace Drink_Menu
             Window5 tempwindow = new Window5();
             tempwindow.Show();
         }
-    }
+
+		private void DrinkBox_MouseDoubleClick(object sender, MouseButtonEventArgs e)
+		{
+			Window2 tempWindow = new Drink_Menu.Window2();
+			tempWindow.Show();
+		}
+
+		private void FoodBox_MouseDoubleClick(object sender, MouseButtonEventArgs e)
+		{
+			Window1 tempWindow = new Drink_Menu.Window1();
+			tempWindow.Show();
+		}
+	}
 }

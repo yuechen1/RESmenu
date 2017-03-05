@@ -8,7 +8,7 @@
         Title="sideWindow" Height="720" Width="480">
     <StackPanel HorizontalAlignment="Left" Height="720" VerticalAlignment="Top" Width="480" Margin="0,0,0,-31">
         <StackPanel HorizontalAlignment="Left" Height="50" VerticalAlignment="Top" Width="470" Orientation="Horizontal">
-            <TextBlock x:Name="txtRestName" HorizontalAlignment="Left" Height="50" TextWrapping="Wrap" Text="Restaurant Name" Width="319" FontFamily="Segoe UI Black" FontSize="36" Foreground="#FF630C0C" Panel.ZIndex="-2" Margin="0" Background="Black"/>
+            <TextBlock x:Name="txtRestName" HorizontalAlignment="Left" Height="50" TextWrapping="Wrap" Text="Dancing Shamrock" Width="319" FontFamily="Segoe UI Black" FontSize="34" Foreground="#FF630C0C" Panel.ZIndex="-2" Margin="0" Background="Black"/>
             <Button x:Name="btnCall" Content="Call" Height="50" VerticalAlignment="Top" Width="60"/>
             <Button x:Name="btnBill" Content="Bill" Height="50" VerticalAlignment="Top" Width="93"/>
         </StackPanel>
@@ -62,7 +62,7 @@
                         </DataTemplate>
                     </ListBox.ItemTemplate>
                 </ListBox>
-                <Button x:Name="btnSideBack" Content="Back" HorizontalAlignment="Left" Height="37" Margin="33,539,0,0" VerticalAlignment="Top" Width="58"/>
+                <Button x:Name="btnSideBack" Content="Back" HorizontalAlignment="Left" Height="37" Margin="32,539,0,0" VerticalAlignment="Top" Width="58" Click="btnSideBack_Click"/>
                 <Button x:Name="btnSideAdd" Content="Add" HorizontalAlignment="Left" Height="37" Margin="346,539,0,0" VerticalAlignment="Top" Width="58"/>
 
             </Grid>

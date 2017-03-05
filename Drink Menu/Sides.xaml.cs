@@ -29,9 +29,14 @@ namespace Drink_Menu
             items.Add(new Sides { Image = null, price = "$0.50", Name = "potato4", Image_1 = null, Name_1 = "sasasa", price_1 = "$1.50" });
             items.Add(new Sides { Image = null, price = null, Name = "potato5", Image_1 = null, Name_1 = "sasasa", price_1 = "$1.50" });
         }
-    }
 
-    public class Sides
+		private void btnSideBack_Click(object sender, RoutedEventArgs e)
+		{
+			this.Close();
+		}
+	}
+
+	public class Sides
     {
         public string Image { get; set; }
         public string price { get; set; }

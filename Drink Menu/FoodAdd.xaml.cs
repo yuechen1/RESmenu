@@ -23,5 +23,10 @@ namespace Drink_Menu
         {
             InitializeComponent();
         }
-    }
+
+		private void btnFoodAddBack_Click(object sender, RoutedEventArgs e)
+		{
+			this.Close();
+		}
+	}
 }

@@ -22,6 +22,24 @@ namespace Drink_Menu
         public Window2()
         {
             InitializeComponent();
+			List<DrinkData> liquids = new List<DrinkData>();
+			liquids.Add(new Drink_Menu.DrinkData { drinkImage = null, drinkName = "Water", drinkDescription = "H2O." });
+
+			//			txtDrinkName.Text = liquids. .drinkName.get();
+			txtDrinkName.Text = "Water";
+			txtDrinkInfo.Text = "H2O.";
         }
-    }
+
+		private void btnDrinkBack_Click(object sender, RoutedEventArgs e)
+		{
+			this.Close();
+		}
+	}
+
+	public class DrinkData
+	{
+		public string drinkImage { get; set; }
+		public string drinkName { get; set; }
+		public string drinkDescription { get; set; }
+	}
 }

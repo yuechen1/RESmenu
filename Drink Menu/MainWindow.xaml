@@ -8,7 +8,7 @@
         Title="MainWindow" Height="720" Width="480">
     <StackPanel HorizontalAlignment="Left" Height="720" VerticalAlignment="Top" Width="470" Margin="0,0,0,-31">
         <StackPanel HorizontalAlignment="Left" Height="50" VerticalAlignment="Top" Width="470" Orientation="Horizontal">
-            <TextBlock x:Name="txtRestName" HorizontalAlignment="Left" Height="50" TextWrapping="Wrap" Text="Restaurant Name" Width="319" FontFamily="Segoe UI Black" FontSize="36" Foreground="#FF630C0C" Panel.ZIndex="-2" Margin="0" Background="Black"/>
+            <TextBlock x:Name="txtRestName" HorizontalAlignment="Left" Height="50" TextWrapping="Wrap" Text="Dancing Shamrock" Width="319" FontFamily="Segoe UI Black" FontSize="34" Foreground="#FF630C0C" Panel.ZIndex="-2" Margin="0" Background="Black"/>
             <Button x:Name="btnCall" Click="btnCall_Click" Content="Call" Height="50" VerticalAlignment="Top" Width="60"/>
             <Button x:Name="btnBill" Click="btnBill_Click" Content="Bill" Height="50" VerticalAlignment="Top" Width="93"/>
         </StackPanel>
@@ -32,7 +32,7 @@
                 </TabControl.Resources>
                 <TabItem Header="Drinks" Margin="0,0,0,0" Height="175" VerticalAlignment="Top">
                     <Grid Background="#FFE5E5E5">
-                        <ListBox Name="DrinkBox" HorizontalAlignment="Left" Height="621" VerticalAlignment="Top" Width="440" Grid.ColumnSpan="2">
+                        <ListBox Name="DrinkBox" HorizontalAlignment="Left" Height="621" VerticalAlignment="Top" Width="440" Grid.ColumnSpan="2" MouseDoubleClick="DrinkBox_MouseDoubleClick">
                             <ListBox.ItemTemplate>
                                 <DataTemplate>
                                     <StackPanel HorizontalAlignment="Left" Height="100" Width="440" Orientation="Horizontal">
@@ -68,9 +68,9 @@
                 </TabItem>
                 <TabItem Header="Food" Margin="0,0,0,0" Height="175" VerticalAlignment="Top">
                     <Grid Background="#FFE5E5E5">
-                        
-                        <ListView Name="FoodBox" HorizontalAlignment="Left" Height="621" VerticalAlignment="Top" Width="440" Grid.ColumnSpan="2">
-                                <ListView.ItemTemplate>
+
+                        <ListView Name="FoodBox" HorizontalAlignment="Left" Height="621" VerticalAlignment="Top" Width="440" Grid.ColumnSpan="2" MouseDoubleClick="FoodBox_MouseDoubleClick" >
+                            <ListView.ItemTemplate>
                                     <DataTemplate>
                                         <StackPanel HorizontalAlignment="Left" Height="100" Width="440" Orientation="Horizontal">
                                             <StackPanel HorizontalAlignment="Left" Height="100" Width="220" Orientation="Horizontal">

@@ -1,0 +1,24 @@
+C:\Users\Michael\Documents\GitHub\RESmenu\Drink Menu\bin\Debug\Drink Menu.exe.config
+C:\Users\Michael\Documents\GitHub\RESmenu\Drink Menu\bin\Debug\Drink Menu.exe
+C:\Users\Michael\Documents\GitHub\RESmenu\Drink Menu\bin\Debug\Drink Menu.pdb
+C:\Users\Michael\Documents\GitHub\RESmenu\Drink Menu\obj\Debug\Drink Menu.csprojResolveAssemblyReference.cache
+C:\Users\Michael\Documents\GitHub\RESmenu\Drink Menu\obj\Debug\MainWindow.g.cs
+C:\Users\Michael\Documents\GitHub\RESmenu\Drink Menu\obj\Debug\FoodMod.g.cs
+C:\Users\Michael\Documents\GitHub\RESmenu\Drink Menu\obj\Debug\DrinkAdd.g.cs
+C:\Users\Michael\Documents\GitHub\RESmenu\Drink Menu\obj\Debug\FoodAdd.g.cs
+C:\Users\Michael\Documents\GitHub\RESmenu\Drink Menu\obj\Debug\Sides.g.cs
+C:\Users\Michael\Documents\GitHub\RESmenu\Drink Menu\obj\Debug\Bill.g.cs
+C:\Users\Michael\Documents\GitHub\RESmenu\Drink Menu\obj\Debug\App.g.cs
+C:\Users\Michael\Documents\GitHub\RESmenu\Drink Menu\obj\Debug\Drink Menu_MarkupCompile.cache
+C:\Users\Michael\Documents\GitHub\RESmenu\Drink Menu\obj\Debug\Drink Menu_MarkupCompile.lref
+C:\Users\Michael\Documents\GitHub\RESmenu\Drink Menu\obj\Debug\MainWindow.baml
+C:\Users\Michael\Documents\GitHub\RESmenu\Drink Menu\obj\Debug\FoodMod.baml
+C:\Users\Michael\Documents\GitHub\RESmenu\Drink Menu\obj\Debug\DrinkAdd.baml
+C:\Users\Michael\Documents\GitHub\RESmenu\Drink Menu\obj\Debug\FoodAdd.baml
+C:\Users\Michael\Documents\GitHub\RESmenu\Drink Menu\obj\Debug\Sides.baml
+C:\Users\Michael\Documents\GitHub\RESmenu\Drink Menu\obj\Debug\Bill.baml
+C:\Users\Michael\Documents\GitHub\RESmenu\Drink Menu\obj\Debug\Drink Menu.g.resources
+C:\Users\Michael\Documents\GitHub\RESmenu\Drink Menu\obj\Debug\Drink_Menu.Properties.Resources.resources
+C:\Users\Michael\Documents\GitHub\RESmenu\Drink Menu\obj\Debug\Drink Menu.csproj.GenerateResource.Cache
+C:\Users\Michael\Documents\GitHub\RESmenu\Drink Menu\obj\Debug\Drink Menu.exe
+C:\Users\Michael\Documents\GitHub\RESmenu\Drink Menu\obj\Debug\Drink Menu.pdb
