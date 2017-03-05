@@ -5,10 +5,10 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Drink_Menu"
         mc:Ignorable="d"
-        Title="Window3" Height="500" Width="300">
+        Title="AddIngredientWindow" Height="500" Width="300">
     <Grid>
-        <TextBlock x:Name="textBlock" HorizontalAlignment="Left" Height="35" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" Width="292"/>
-        <ListBox x:Name="listBox" HorizontalAlignment="Left" Height="373" Margin="0,40,0,0" VerticalAlignment="Top" Width="292">
+        <TextBlock x:Name="txtAddInfo" HorizontalAlignment="Left" Height="35" TextWrapping="Wrap" Text="Please select the ingredients you would like to add to your order:" VerticalAlignment="Top" Width="292"/>
+        <ListBox x:Name="lbxIngredientList" HorizontalAlignment="Left" Height="373" Margin="0,40,0,0" VerticalAlignment="Top" Width="300">
             <ListBox.ItemTemplate>
                 <DataTemplate>
                     <StackPanel HorizontalAlignment="Left" Height="40" Width="300" Orientation="Horizontal">
@@ -19,8 +19,8 @@
                 </DataTemplate>
             </ListBox.ItemTemplate>
         </ListBox>
-        <Button x:Name="button" Content="Back" HorizontalAlignment="Left" Height="29" Margin="24,430,0,0" VerticalAlignment="Top" Width="54"/>
-        <Button x:Name="button_Copy" Content="Add" HorizontalAlignment="Left" Height="29" Margin="218,430,0,0" VerticalAlignment="Top" Width="54"/>
+        <Button x:Name="btnFoodAddBack" Content="Back" HorizontalAlignment="Left" Height="29" Margin="24,430,0,0" VerticalAlignment="Top" Width="54"/>
+        <Button x:Name="btnFoodAddAccept" Content="Add" HorizontalAlignment="Left" Height="29" Margin="218,430,0,0" VerticalAlignment="Top" Width="54"/>
 
     </Grid>
 </Window>

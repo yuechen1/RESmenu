@@ -5,12 +5,12 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Drink_Menu"
         mc:Ignorable="d"
-        Title="Window1" Height="780" Width="480">
+        Title="FoodEditWindow" Height="780" Width="480">
     <StackPanel HorizontalAlignment="Left" Height="720" VerticalAlignment="Top" Width="480" Margin="0,0,0,-31">
         <StackPanel HorizontalAlignment="Left" Height="50" VerticalAlignment="Top" Width="470" Orientation="Horizontal">
-            <TextBlock x:Name="textBlock" HorizontalAlignment="Left" Height="50" TextWrapping="Wrap" Text="Restaurant Name" Width="319" FontFamily="Segoe UI Black" FontSize="36" Foreground="#FF630C0C" Panel.ZIndex="-2" Margin="0" Background="Black"/>
-            <Button x:Name="button" Content="Button" Height="50" VerticalAlignment="Top" Width="60"/>
-            <Button x:Name="button_Copy" Content="Button" Height="50" VerticalAlignment="Top" Width="93"/>
+            <TextBlock x:Name="txtRestName" HorizontalAlignment="Left" Height="50" TextWrapping="Wrap" Text="Restaurant Name" Width="319" FontFamily="Segoe UI Black" FontSize="36" Foreground="#FF630C0C" Panel.ZIndex="-2" Margin="0" Background="Black"/>
+            <Button x:Name="btnCall" Content="Call" Height="50" VerticalAlignment="Top" Width="60"/>
+            <Button x:Name="btnBill" Content="Bill" Height="50" VerticalAlignment="Top" Width="93"/>
         </StackPanel>
         <StackPanel HorizontalAlignment="Left" Height="637" Width="470" Orientation="Horizontal">
             <TabControl x:Name="tabControl" Height="720" VerticalAlignment="Top" Width="30" TabStripPlacement="Left" Margin="0,0,0,-59">
@@ -31,12 +31,12 @@
                     </Style>
                 </TabControl.Resources>
                 <TabItem Header="Drinks" Margin="0,0,0,0" Height="175" VerticalAlignment="Top"/>
-                <TabItem Header="Food" Margin="0,1,-2,-148" Height="175" VerticalAlignment="Top"/>
+                <TabItem Header="Food" Margin="0,0,0,0" Height="175" VerticalAlignment="Top"/>
                 <TabItem Header="Special" Margin="0,0,0,0" Height="175" VerticalAlignment="Top"/>
             </TabControl>
             <Grid Height="720" Margin="0,0,0,-83" VerticalAlignment="Top" Width="440">
-                <TextBlock x:Name="textBlock1" HorizontalAlignment="Left" Height="168" Margin="252,205,0,0" TextWrapping="Wrap" Text="{Binding discreption}" VerticalAlignment="Top" Width="154"/>
-                <ListBox x:Name="listBox" HorizontalAlignment="Left" Height="458" Margin="31,52,0,0" VerticalAlignment="Top" Width="200">
+                <TextBlock x:Name="txtFoodInfo" HorizontalAlignment="Left" Height="168" Margin="252,205,0,0" TextWrapping="Wrap" Text="{Binding discreption}" VerticalAlignment="Top" Width="154"/>
+                <ListBox x:Name="lbxIngredientList" HorizontalAlignment="Left" Height="458" Margin="31,52,0,0" VerticalAlignment="Top" Width="200">
                     <ListBox.ItemTemplate>
                         <DataTemplate>
                             <StackPanel HorizontalAlignment="Left" Height="40" Width="200" Orientation="Horizontal">
@@ -46,8 +46,8 @@
                         </DataTemplate>
                     </ListBox.ItemTemplate>
                 </ListBox>
-                <Button x:Name="button1" Content="Back" HorizontalAlignment="Left" Height="39" Margin="31,535,0,0" VerticalAlignment="Top" Width="39"/>
-                <Button x:Name="button1_Copy" Content="Add" HorizontalAlignment="Left" Height="39" Margin="350,535,0,0" VerticalAlignment="Top" Width="39"/>
+                <Button x:Name="btnModBack" Content="Back" HorizontalAlignment="Left" Height="39" Margin="31,535,0,0" VerticalAlignment="Top" Width="39"/>
+                <Button x:Name="btnModAdd" Content="Add" HorizontalAlignment="Left" Height="39" Margin="350,535,0,0" VerticalAlignment="Top" Width="39"/>
                 <TabControl x:Name="ItemImage" HorizontalAlignment="Left" Height="149" Margin="252,52,0,0" VerticalAlignment="Top" Width="166" TabStripPlacement="Bottom">
                     <TabItem Header="Image1">
                         <Grid Background="#FFE5E5E5"/>
@@ -56,8 +56,8 @@
                         <Grid Background="#FFE5E5E5" />
                     </TabItem>
                 </TabControl>
-                <TextBlock x:Name="textBlock2" HorizontalAlignment="Left" TextWrapping="Wrap" Text="{Binding Name}" VerticalAlignment="Top" Height="34" Width="100" FontSize="36"/>
-                <TextBlock x:Name="alergy" Text="{Binding alergy}" HorizontalAlignment="Left" Height="63" Margin="252,397,0,0" VerticalAlignment="Top" Width="154"/>
+                <TextBlock x:Name="txtFoodName" HorizontalAlignment="Left" TextWrapping="Wrap" Text="{Binding Name}" VerticalAlignment="Top" Height="34" Width="100" FontSize="36"/>
+                <TextBlock x:Name="txtAllergies" Text="{Binding alergy}" HorizontalAlignment="Left" Height="63" Margin="252,397,0,0" VerticalAlignment="Top" Width="154"/>
             </Grid>
         </StackPanel>
     </StackPanel>

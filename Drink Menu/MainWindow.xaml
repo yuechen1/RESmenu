@@ -8,9 +8,9 @@
         Title="MainWindow" Height="720" Width="480">
     <StackPanel HorizontalAlignment="Left" Height="720" VerticalAlignment="Top" Width="470" Margin="0,0,0,-31">
         <StackPanel HorizontalAlignment="Left" Height="50" VerticalAlignment="Top" Width="470" Orientation="Horizontal">
-            <TextBlock x:Name="textBlock" HorizontalAlignment="Left" Height="50" TextWrapping="Wrap" Text="Restaurant Name" Width="319" FontFamily="Segoe UI Black" FontSize="36" Foreground="#FF630C0C" Panel.ZIndex="-2" Margin="0" Background="Black"/>
-            <Button x:Name="button" Content="Button" Height="50" VerticalAlignment="Top" Width="60"/>
-            <Button x:Name="button_Copy" Content="Button" Height="50" VerticalAlignment="Top" Width="93"/>
+            <TextBlock x:Name="txtRestName" HorizontalAlignment="Left" Height="50" TextWrapping="Wrap" Text="Restaurant Name" Width="319" FontFamily="Segoe UI Black" FontSize="36" Foreground="#FF630C0C" Panel.ZIndex="-2" Margin="0" Background="Black"/>
+            <Button x:Name="btnCall" Content="Call" Height="50" VerticalAlignment="Top" Width="60"/>
+            <Button x:Name="btnBill" Content="Bill" Height="50" VerticalAlignment="Top" Width="93"/>
         </StackPanel>
         <StackPanel HorizontalAlignment="Left" Height="637" Width="470" Orientation="Horizontal">
             <TabControl x:Name="tabControl" Height="627" VerticalAlignment="Top" Width="470" TabStripPlacement="Left">
@@ -66,7 +66,7 @@
                         </ListBox>
                     </Grid>
                 </TabItem>
-                <TabItem Header="Food" Margin="0,1,-2,-148" Height="175" VerticalAlignment="Top">
+                <TabItem Header="Food" Margin="0,0,0,0" Height="175" VerticalAlignment="Top">
                     <Grid Background="#FFE5E5E5">
                         <Grid.RowDefinitions>
                             <RowDefinition Height="443*"/>
