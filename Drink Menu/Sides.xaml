@@ -35,7 +35,7 @@
                 <TabItem Header="Special" Margin="0,0,0,0" Height="175" VerticalAlignment="Top"/>
             </TabControl>
             <Grid Height="720" Margin="0,0,0,-83" VerticalAlignment="Top" Width="440">
-                <TextBlock x:Name="txtSide" HorizontalAlignment="Left" Height="46" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" Width="440"/>
+                <TextBlock x:Name="txtSide" HorizontalAlignment="Left" Height="46" TextWrapping="Wrap" Text="Sides" VerticalAlignment="Top" Width="440" FontSize="36"/>
                 <ListBox x:Name="lbxSideDisplay" HorizontalAlignment="Left" Height="472" Margin="0,51,0,0" VerticalAlignment="Top" Width="440">
                     <ListBox.ItemTemplate>
                         <DataTemplate>
@@ -45,18 +45,16 @@
                                     <StackPanel HorizontalAlignment="Left" Height="100" Width="170" Orientation="Vertical">
                                         <TextBlock Text="{Binding Name}" FontWeight="Bold"/>
                                         <StackPanel HorizontalAlignment="Left" Height="100" Width="170" Orientation="Horizontal">
-                                            <TextBlock Text="Price: $"/>
                                             <TextBlock Text="{Binding price}"/>
                                         </StackPanel>
                                     </StackPanel>
                                 </StackPanel>
                                 <StackPanel HorizontalAlignment="Left" Height="100" Width="220" Orientation="Horizontal">
-                                    <Image Source="{Binding Image}" Height="100" Width="50"/>
+                                    <Image Source="{Binding Image_1}" Height="100" Width="50"/>
                                     <StackPanel HorizontalAlignment="Left" Height="100" Width="170" Orientation="Vertical">
-                                        <TextBlock Text="{Binding Name}" FontWeight="Bold"/>
+                                        <TextBlock Text="{Binding Name_1}" FontWeight="Bold"/>
                                         <StackPanel HorizontalAlignment="Left" Height="100" Width="170" Orientation="Horizontal">
-                                            <TextBlock Text="Price: $"/>
-                                            <TextBlock Text="{Binding price}"/>
+                                            <TextBlock Text="{Binding price_1}"/>
                                         </StackPanel>
                                     </StackPanel>
                                 </StackPanel>
