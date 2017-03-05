@@ -56,8 +56,9 @@
                         <Grid Background="#FFE5E5E5" />
                     </TabItem>
                 </TabControl>
-                <TextBlock x:Name="txtFoodName" HorizontalAlignment="Left" TextWrapping="Wrap" Text="{Binding foodName}" VerticalAlignment="Top" Height="34" Width="100" FontSize="36"/>
+                <TextBlock x:Name="txtFoodName" HorizontalAlignment="Left" TextWrapping="Wrap" Text="{Binding foodName}" VerticalAlignment="Top" Height="47" Width="100" FontSize="36"/>
                 <TextBlock x:Name="txtAllergies" Text="{Binding allergy}" HorizontalAlignment="Left" Height="63" Margin="252,397,0,0" VerticalAlignment="Top" Width="154"/>
+                <Button x:Name="button" Content="ADD" Click="button_Click" HorizontalAlignment="Left" Height="27" Margin="198,25,0,0" VerticalAlignment="Top" Width="33"/>
             </Grid>
         </StackPanel>
     </StackPanel>

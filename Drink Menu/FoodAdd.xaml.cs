@@ -22,6 +22,11 @@ namespace Drink_Menu
         public Window3()
         {
             InitializeComponent();
+            List<ingredient> recipe = new List<ingredient>();
+            recipe.Add(new ingredient { name = "Salt", price = "$0.00" });
+            recipe.Add(new ingredient { name = "Pepper", price = "$0.00" });
+            recipe.Add(new ingredient { name = "BBQ Sauce", price = "$0.00" });
+            lbxIngredientList.ItemsSource = recipe;
         }
 
 		private void btnFoodAddBack_Click(object sender, RoutedEventArgs e)

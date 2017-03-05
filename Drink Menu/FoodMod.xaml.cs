@@ -49,9 +49,15 @@ namespace Drink_Menu
 		{
 			this.Close();
 		}
-	}
 
-	public class Food
+        private void button_Click(object sender, RoutedEventArgs e)
+        {
+            Window3 sideWindow = new Drink_Menu.Window3();
+            sideWindow.Show();
+        }
+    }
+
+    public class Food
     {
         public string Image1 { set; get; }
         public string Image2 { set; get; }

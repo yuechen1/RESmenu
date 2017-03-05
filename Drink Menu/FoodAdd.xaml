@@ -12,9 +12,8 @@
             <ListBox.ItemTemplate>
                 <DataTemplate>
                     <StackPanel HorizontalAlignment="Left" Height="40" Width="300" Orientation="Horizontal">
-                        <CheckBox x:Name="checkBox" Content="{Binding Name}" Height="40" Width="40"/>
-                        <TextBlock x:Name="contentname" Text="{Binding Name}" Width="200"/>
-                        <TextBlock x:Name="contentprice" Text="{Binding Price}" Width="60"/>
+                        <CheckBox x:Name="checkBox" Content="{Binding name}" Height="40" Width="240"/>
+                        <TextBlock x:Name="contentprice" Text="{Binding price}" Width="60"/>
                     </StackPanel>
                 </DataTemplate>
             </ListBox.ItemTemplate>
