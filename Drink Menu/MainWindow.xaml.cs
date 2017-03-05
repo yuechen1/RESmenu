@@ -29,7 +29,11 @@ namespace Drink_Menu
             items.Add(new Drinkdisplay { Image = null, Name = "suger water", price12 = "8.00", price16 = "10.00", Image_1 = null, Name_1 = "Water", price12_1 = "8.00", price16_1 = "10.00" });
             items.Add(new Drinkdisplay { Image = null, Name = "suger water", price12 = "8.00", price16 = "10.00", Image_1 = null, Name_1 = "Water", price12_1 = "8.00", price16_1 = "10.00" });
             items.Add(new Drinkdisplay { Image = null, Name = "suger water", price12 = "8.00", price16 = "10.00", Image_1 = null, Name_1 = "Water", price12_1 = "8.00", price16_1 = "10.00" });
+            items.Add(new Drinkdisplay { Image = null, Name = "suger water", price12 = "8.00", price16 = "10.00", Image_1 = null, Name_1 = "Water", price12_1 = "8.00", price16_1 = "10.00" });
+            items.Add(new Drinkdisplay { Image = null, Name = "suger water", price12 = "8.00", price16 = "10.00", Image_1 = null, Name_1 = "Water", price12_1 = "8.00", price16_1 = "10.00" });
+            items.Add(new Drinkdisplay { Image = null, Name = "suger water", price12 = "8.00", price16 = "10.00", Image_1 = null, Name_1 = "Water", price12_1 = "8.00", price16_1 = "10.00" });
             DrinkBox.ItemsSource = items;
+            FoodBox.ItemsSource = items;
         }
 
         public class Drinkdisplay
@@ -50,6 +54,17 @@ namespace Drink_Menu
             public string Name { get; set; }
             public string price12 { get; set; }
             public string price16 { get; set; }
+        }
+
+        private void btnCall_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void btnBill_Click(object sender, RoutedEventArgs e)
+        {
+            Window5 tempwindow = new Window5();
+            tempwindow.Show();
         }
     }
 }

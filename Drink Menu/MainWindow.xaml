@@ -9,8 +9,8 @@
     <StackPanel HorizontalAlignment="Left" Height="720" VerticalAlignment="Top" Width="470" Margin="0,0,0,-31">
         <StackPanel HorizontalAlignment="Left" Height="50" VerticalAlignment="Top" Width="470" Orientation="Horizontal">
             <TextBlock x:Name="txtRestName" HorizontalAlignment="Left" Height="50" TextWrapping="Wrap" Text="Restaurant Name" Width="319" FontFamily="Segoe UI Black" FontSize="36" Foreground="#FF630C0C" Panel.ZIndex="-2" Margin="0" Background="Black"/>
-            <Button x:Name="btnCall" Content="Call" Height="50" VerticalAlignment="Top" Width="60"/>
-            <Button x:Name="btnBill" Content="Bill" Height="50" VerticalAlignment="Top" Width="93"/>
+            <Button x:Name="btnCall" Click="btnCall_Click" Content="Call" Height="50" VerticalAlignment="Top" Width="60"/>
+            <Button x:Name="btnBill" Click="btnBill_Click" Content="Bill" Height="50" VerticalAlignment="Top" Width="93"/>
         </StackPanel>
         <StackPanel HorizontalAlignment="Left" Height="637" Width="470" Orientation="Horizontal">
             <TabControl x:Name="tabControl" Height="627" VerticalAlignment="Top" Width="470" TabStripPlacement="Left">
@@ -68,10 +68,35 @@
                 </TabItem>
                 <TabItem Header="Food" Margin="0,0,0,0" Height="175" VerticalAlignment="Top">
                     <Grid Background="#FFE5E5E5">
-                        <Grid.RowDefinitions>
-                            <RowDefinition Height="443*"/>
-                            <RowDefinition Height="193*"/>
-                        </Grid.RowDefinitions>
+                        
+                        <ListView Name="FoodBox" HorizontalAlignment="Left" Height="621" VerticalAlignment="Top" Width="440" Grid.ColumnSpan="2">
+                                <ListView.ItemTemplate>
+                                    <DataTemplate>
+                                        <StackPanel HorizontalAlignment="Left" Height="100" Width="440" Orientation="Horizontal">
+                                            <StackPanel HorizontalAlignment="Left" Height="100" Width="220" Orientation="Horizontal">
+                                                <Image Source="{Binding Image}" Height="100" Width="50"/>
+                                                <StackPanel HorizontalAlignment="Left" Height="100" Width="170" Orientation="Vertical">
+                                                    <TextBlock Text="{Binding Name}" FontWeight="Bold"/>
+                                                    <StackPanel HorizontalAlignment="Left" Height="100" Width="170" Orientation="Horizontal">
+                                                        <TextBlock Text="Price: $"/>
+                                                    <TextBlock Text="{Binding price12}"/>
+                                                </StackPanel>
+                                                </StackPanel>
+                                            </StackPanel>
+                                            <StackPanel HorizontalAlignment="Left" Height="100" Width="220" Orientation="Horizontal">
+                                                <Image Source="{Binding Image_1}" Height="100" Width="50"/>
+                                                <StackPanel HorizontalAlignment="Left" Height="100" Width="170" Orientation="Vertical">
+                                                    <TextBlock Text="{Binding Name_1}" FontWeight="Bold"/>
+                                                    <StackPanel HorizontalAlignment="Left" Height="100" Width="170" Orientation="Horizontal">
+                                                        <TextBlock Text="Price: $"/>
+                                                    <TextBlock Text="{Binding price12_1}"/>
+                                                </StackPanel>
+                                                </StackPanel>
+                                            </StackPanel>
+                                        </StackPanel>
+                                    </DataTemplate>
+                                </ListView.ItemTemplate>
+                           </ListView>
                     </Grid>
                 </TabItem>
                 <TabItem Header="Special" Margin="0,0,0,0" Height="175" VerticalAlignment="Top">
