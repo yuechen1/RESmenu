@@ -35,8 +35,11 @@ namespace Drink_Menu
             DrinkBox.ItemsSource = items;
 
 			List<Drinkdisplay> meals = new List<Drinkdisplay>();
-
-            FoodBox.ItemsSource = items;
+            meals.Add(new Drinkdisplay { Image = null, Name = "Steak", price12 = "25.00", Name_1 = "other food", Image_1 = null, price12_1 = "15.00" });
+            meals.Add(new Drinkdisplay { Image = null, Name = "food", price12 = "25.00", Name_1 = "other food", Image_1 = null, price12_1 = "15.00" });
+            meals.Add(new Drinkdisplay { Image = null, Name = "food", price12 = "25.00", Name_1 = "other food", Image_1 = null, price12_1 = "15.00" });
+            meals.Add(new Drinkdisplay { Image = null, Name = "food", price12 = "25.00", Name_1 = "other food", Image_1 = null, price12_1 = "15.00" });
+            FoodBox.ItemsSource = meals;
         }
 
         public class Drinkdisplay
