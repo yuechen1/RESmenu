@@ -76,6 +76,7 @@ namespace Drink_Menu
             BurgerMain_text.Opacity = 100;
             pagename_drinkpage.Height = 670;
             pagename_stackpage.Height = 0;
+            Menushow.Width = 0;
         }
 
         private void DinnerMain_Click(object sender, RoutedEventArgs e)
@@ -88,6 +89,7 @@ namespace Drink_Menu
             BurgerMain_text.Opacity = 100;
             pagename_stackpage.Height = 670;
             pagename_drinkpage.Height = 0;
+            Menushow.Width = 0;
         }
 
         private void BurgerMain_Click(object sender, RoutedEventArgs e)
@@ -98,6 +100,7 @@ namespace Drink_Menu
             DinnerMain_text.Opacity = 100;
             BurgerMain.IsEnabled = false;
             BurgerMain_text.Opacity = 70;
+            Menushow.Width = 0;
         }
 
         private void pagename_SourceUpdated(object sender, DataTransferEventArgs e)
