@@ -20,123 +20,29 @@
         <Grid HorizontalAlignment="Left" Height="637" Width="470">
             <StackPanel x:Name="Menushow" Orientation="Horizontal" Height="720" Width="0" Panel.ZIndex="1" HorizontalAlignment="Left">
                 <StackPanel Orientation="Vertical" Height="720" Width="234" HorizontalAlignment="Left" Background="#FF303030">
-                    <Button IsEnabled="False" >
+                    <Button x:Name="DrinkMain" Click="DrinkMain_Click" IsEnabled="False" >
                         <StackPanel Orientation="Horizontal" Height="100" Width="234" HorizontalAlignment="Left">
-                            <Image Source="Resources/images/drinkimage.png" RenderOptions.BitmapScalingMode="Fant" Height="100" Width="100" Opacity="70"/>
-                            <TextBlock Text="Drinks" Foreground="#FFFDFDFD" FontSize="40" Opacity="70"/>
+                            <Image Source="Resources/images/drinkimage.png" RenderOptions.BitmapScalingMode="Fant" Height="100" Width="100"/>
+                            <TextBlock x:Name="DrinkMain_text" Text="Drinks" Foreground="#FFFDFDFD" FontSize="40" Opacity="70"/>
                         </StackPanel>
                     </Button>
-                    <Button IsEnabled="True" >
+                    <Button x:Name="DinnerMain" Click="DinnerMain_Click" IsEnabled="True" >
                         <StackPanel Orientation="Horizontal" Height="100" Width="234" HorizontalAlignment="Left">
                             <Image Source="Resources/images/stakeimage.png" RenderOptions.BitmapScalingMode="Fant" Height="100" Width="100"/>
-                            <TextBlock Text="Dinner" Foreground="Black" FontSize="40" />
+                            <TextBlock x:Name="DinnerMain_text" Text="Dinner" Foreground="Black" FontSize="40" />
                         </StackPanel>
                     </Button>
-                    <Button IsEnabled="True" >
+                    <Button x:Name="BurgerMain" Click="BurgerMain_Click" IsEnabled="True" >
                         <StackPanel Orientation="Horizontal" Height="100" Width="234" HorizontalAlignment="Left">
                             <Image Source="Resources/images/burgerimage.png" RenderOptions.BitmapScalingMode="Fant" Height="100" Width="100"/>
-                            <TextBlock Text="Burger" Foreground="Black" FontSize="40" />
+                            <TextBlock x:Name="BurgerMain_text"  Text="Burger" Foreground="Black" FontSize="40" />
                         </StackPanel>
                     </Button>
                 </StackPanel>
                 <Button x:Name="quitmenu" Click="quitmenu_Click" Height="720" Width="236" Opacity="0"/>
             </StackPanel>
-            <TabControl x:Name="tabControl" Height="627" VerticalAlignment="Top" Width="470" TabStripPlacement="Left">
-                <TabControl.Resources>
-                    <Style TargetType="{x:Type TabItem}">
-                        <Setter Property="HeaderTemplate">
-                            <Setter.Value>
-                                <DataTemplate>
-                                    <ContentPresenter Content="{TemplateBinding Content}">
-                                        <ContentPresenter.LayoutTransform>
-                                            <RotateTransform Angle="270" />
-                                        </ContentPresenter.LayoutTransform>
-                                    </ContentPresenter>
-                                </DataTemplate>
-                            </Setter.Value>
-                        </Setter>
-                        <Setter Property="Padding" Value="3" />
-                    </Style>
-                </TabControl.Resources>
-                <TabItem Header="Drinks" Margin="0,0,0,-32" Height="207" VerticalAlignment="Top">
-                    <Grid Background="#FFE5E5E5">
-                        <ListBox Name="DrinkBox" HorizontalAlignment="Left" Height="621" VerticalAlignment="Top" Width="440" Grid.ColumnSpan="2" MouseDoubleClick="DrinkBox_MouseDoubleClick">
-                            <ListBox.ItemTemplate>
-                                <DataTemplate>
-                                    <StackPanel HorizontalAlignment="Left" Height="100" Width="440" Orientation="Horizontal">
-                                        <StackPanel HorizontalAlignment="Left" Height="100" Width="220" Orientation="Horizontal">
-                                            <Image Source="{Binding Image}" Height="100" Width="50"/>
-                                            <StackPanel HorizontalAlignment="Left" Height="100" Width="170" Orientation="Vertical">
-                                                <TextBlock Text="{Binding Name}" FontWeight="Bold"/>
-                                                <StackPanel HorizontalAlignment="Left" Height="100" Width="170" Orientation="Horizontal">
-                                                    <TextBlock Text="12oz: $"/>
-                                                    <TextBlock Text="{Binding price12}"/>
-                                                    <TextBlock Text="   16oz: $"/>
-                                                    <TextBlock Text="{Binding price16}"/>
-                                                </StackPanel>
-                                            </StackPanel>
-                                        </StackPanel>
-                                        <StackPanel HorizontalAlignment="Left" Height="100" Width="220" Orientation="Horizontal">
-                                            <Image Source="{Binding Image_1}" Height="100" Width="50"/>
-                                            <StackPanel HorizontalAlignment="Left" Height="100" Width="170" Orientation="Vertical">
-                                                <TextBlock Text="{Binding Name_1}" FontWeight="Bold"/>
-                                                <StackPanel HorizontalAlignment="Left" Height="100" Width="170" Orientation="Horizontal">
-                                                    <TextBlock Text="12oz: $"/>
-                                                    <TextBlock Text="{Binding price12_1}"/>
-                                                    <TextBlock Text="   16oz: $"/>
-                                                    <TextBlock Text="{Binding price16_1}"/>
-                                                </StackPanel>
-                                            </StackPanel>
-                                        </StackPanel>
-                                    </StackPanel>
-                                </DataTemplate>
-                            </ListBox.ItemTemplate>
-                        </ListBox>
-                    </Grid>
-                </TabItem>
-                <TabItem Header="Food" Margin="0,-1,0,0" Height="209" VerticalAlignment="Top">
-                    <Grid Background="#FFE5E5E5">
-                        <Grid.RowDefinitions>
-                            <RowDefinition Height="172*"/>
-                            <RowDefinition Height="449*"/>
-                        </Grid.RowDefinitions>
-
-                        <ListView Name="FoodBox" HorizontalAlignment="Left" Height="621" VerticalAlignment="Top" Width="440" MouseDoubleClick="FoodBox_MouseDoubleClick" Grid.RowSpan="2" >
-                            <ListView.ItemTemplate>
-                                <DataTemplate>
-                                    <StackPanel HorizontalAlignment="Left" Height="100" Width="440" Orientation="Horizontal">
-                                        <StackPanel HorizontalAlignment="Left" Height="100" Width="220" Orientation="Horizontal">
-                                            <Image Source="{Binding Image}" Height="100" Width="50"/>
-                                            <StackPanel HorizontalAlignment="Left" Height="100" Width="170" Orientation="Vertical">
-                                                <TextBlock Text="{Binding Name}" FontWeight="Bold"/>
-                                                <StackPanel HorizontalAlignment="Left" Height="100" Width="170" Orientation="Horizontal">
-                                                    <TextBlock Text="Price: $"/>
-                                                    <TextBlock Text="{Binding price12}"/>
-                                                </StackPanel>
-                                            </StackPanel>
-                                        </StackPanel>
-                                        <StackPanel HorizontalAlignment="Left" Height="100" Width="220" Orientation="Horizontal">
-                                            <Image Source="{Binding Image_1}" Height="100" Width="50"/>
-                                            <StackPanel HorizontalAlignment="Left" Height="100" Width="170" Orientation="Vertical">
-                                                <TextBlock Text="{Binding Name_1}" FontWeight="Bold"/>
-                                                <StackPanel HorizontalAlignment="Left" Height="100" Width="170" Orientation="Horizontal">
-                                                    <TextBlock Text="Price: $"/>
-                                                    <TextBlock Text="{Binding price12_1}"/>
-                                                </StackPanel>
-                                            </StackPanel>
-                                        </StackPanel>
-                                    </StackPanel>
-                                </DataTemplate>
-                            </ListView.ItemTemplate>
-                        </ListView>
-                    </Grid>
-                </TabItem>
-                <TabItem Header="Special" Margin="0,-1,0,-9" Height="212" VerticalAlignment="Top">
-                    <Grid Background="#FFE5E5E5">
-
-                    </Grid>
-                </TabItem>
-            </TabControl>
+            <Frame x:Name="pagename_drinkpage"  Source="pageDrink.xaml" Height="670"/>
+            <Frame x:Name="pagename_stackpage"  Source="pagestake.xaml" Height="0"/>
         </Grid>
     </StackPanel>
 

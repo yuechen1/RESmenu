@@ -1,0 +1,46 @@
+﻿<Page x:Class="Drink_Menu.Page2"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Drink_Menu"
+      mc:Ignorable="d" 
+      d:DesignHeight="627" d:DesignWidth="470"
+      Title="Page2">
+    <Grid>
+        <ListBox Name="FoodBox" HorizontalAlignment="Left" Height="627" Margin="0,0,0,0" VerticalAlignment="Top" Width="470" 
+                 MouseDoubleClick="FoodBox_MouseDoubleClick"
+                 ScrollViewer.HorizontalScrollBarVisibility="Disabled">
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <StackPanel HorizontalAlignment="Left" Height="100" Width="470" Orientation="Horizontal">
+                        <StackPanel HorizontalAlignment="Left" Height="100" Width="220" Orientation="Horizontal">
+                            <Image Source="{Binding Image}" Height="100" Width="50"/>
+                            <StackPanel HorizontalAlignment="Left" Height="100" Width="170" Orientation="Vertical">
+                                <TextBlock Text="{Binding Name}" FontWeight="Bold"/>
+                                <StackPanel HorizontalAlignment="Left" Height="100" Width="170" Orientation="Horizontal">
+                                    <TextBlock Text="12oz: $"/>
+                                    <TextBlock Text="{Binding price12}"/>
+                                    <TextBlock Text="   16oz: $"/>
+                                    <TextBlock Text="{Binding price16}"/>
+                                </StackPanel>
+                            </StackPanel>
+                        </StackPanel>
+                        <StackPanel HorizontalAlignment="Left" Height="100" Width="220" Orientation="Horizontal">
+                            <Image Source="{Binding Image_1}" Height="100" Width="50"/>
+                            <StackPanel HorizontalAlignment="Left" Height="100" Width="170" Orientation="Vertical">
+                                <TextBlock Text="{Binding Name_1}" FontWeight="Bold"/>
+                                <StackPanel HorizontalAlignment="Left" Height="100" Width="170" Orientation="Horizontal">
+                                    <TextBlock Text="12oz: $"/>
+                                    <TextBlock Text="{Binding price12_1}"/>
+                                    <TextBlock Text="   16oz: $"/>
+                                    <TextBlock Text="{Binding price16_1}"/>
+                                </StackPanel>
+                            </StackPanel>
+                        </StackPanel>
+                    </StackPanel>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+        </ListBox>
+    </Grid>
+</Page>

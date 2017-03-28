@@ -46,3 +46,8 @@ C:\Users\Yue\Documents\Visual Studio 2015\Projects\Resturant Menu\Drink Menu\obj
 C:\Users\Yue\Documents\Visual Studio 2015\Projects\Resturant Menu\Drink Menu\obj\Debug\Drink Menu.g.resources
 C:\Users\Yue\Documents\Visual Studio 2015\Projects\Resturant Menu\Drink Menu\obj\Debug\Drink_Menu.Properties.Resources.resources
 C:\Users\Yue\Documents\Visual Studio 2015\Projects\Resturant Menu\Drink Menu\obj\Debug\Drink Menu.csproj.GenerateResource.Cache
+C:\Users\Yue\Documents\Visual Studio 2015\Projects\Resturant Menu\Drink Menu\obj\Debug\pageDrink.g.cs
+C:\Users\Yue\Documents\Visual Studio 2015\Projects\Resturant Menu\Drink Menu\obj\Debug\pageDrink.baml
+C:\Users\Yue\Documents\Visual Studio 2015\Projects\Resturant Menu\Drink Menu\bin\Debug\pageDrink.xaml.cs
+C:\Users\Yue\Documents\Visual Studio 2015\Projects\Resturant Menu\Drink Menu\obj\Debug\pagestake.g.cs
+C:\Users\Yue\Documents\Visual Studio 2015\Projects\Resturant Menu\Drink Menu\obj\Debug\pagestake.baml

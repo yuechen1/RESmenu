@@ -68,6 +68,13 @@
     <Compile Include="FoodAdd.xaml.cs">
       <DependentUpon>FoodAdd.xaml</DependentUpon>
     </Compile>
+    <Compile Include="pagestake.xaml.cs">
+      <DependentUpon>pagestake.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="pageDrink.xaml.cs">
+      <DependentUpon>pageDrink.xaml</DependentUpon>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
     <Compile Include="Sides.xaml.cs">
       <DependentUpon>Sides.xaml</DependentUpon>
     </Compile>
@@ -97,6 +104,15 @@
     <Page Include="FoodAdd.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="pagestake.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="pageDrink.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Page>
     <Page Include="Sides.xaml">
       <SubType>Designer</SubType>

@@ -23,23 +23,6 @@ namespace Drink_Menu
         public MainWindow()
         {
             InitializeComponent();
-            List<Drinkdisplay> items = new List<Drinkdisplay>();
-            items.Add(new Drinkdisplay {Image = null, Name = "suger water", price12 = "8.00", price16 = "10.00", Image_1 = null, Name_1 = "Water", price12_1 = "8.00", price16_1 = "10.00" });
-            items.Add(new Drinkdisplay { Image = null, Name = "suger water", price12 = "8.00", price16 = "10.00", Image_1 = null, Name_1 = "Water", price12_1 = "8.00", price16_1 = "10.00" });
-            items.Add(new Drinkdisplay { Image = null, Name = "suger water", price12 = "8.00", price16 = "10.00", Image_1 = null, Name_1 = "Water", price12_1 = "8.00", price16_1 = "10.00" });
-            items.Add(new Drinkdisplay { Image = null, Name = "suger water", price12 = "8.00", price16 = "10.00", Image_1 = null, Name_1 = "Water", price12_1 = "8.00", price16_1 = "10.00" });
-            items.Add(new Drinkdisplay { Image = null, Name = "suger water", price12 = "8.00", price16 = "10.00", Image_1 = null, Name_1 = "Water", price12_1 = "8.00", price16_1 = "10.00" });
-            items.Add(new Drinkdisplay { Image = null, Name = "suger water", price12 = "8.00", price16 = "10.00", Image_1 = null, Name_1 = "Water", price12_1 = "8.00", price16_1 = "10.00" });
-            items.Add(new Drinkdisplay { Image = null, Name = "suger water", price12 = "8.00", price16 = "10.00", Image_1 = null, Name_1 = "Water", price12_1 = "8.00", price16_1 = "10.00" });
-            items.Add(new Drinkdisplay { Image = null, Name = "suger water", price12 = "8.00", price16 = "10.00", Image_1 = null, Name_1 = "Water", price12_1 = "8.00", price16_1 = "10.00" });
-            DrinkBox.ItemsSource = items;
-
-			List<Drinkdisplay> meals = new List<Drinkdisplay>();
-            meals.Add(new Drinkdisplay { Image = null, Name = "Steak", price12 = "25.00", Name_1 = "other food", Image_1 = null, price12_1 = "15.00" });
-            meals.Add(new Drinkdisplay { Image = null, Name = "food", price12 = "25.00", Name_1 = "other food", Image_1 = null, price12_1 = "15.00" });
-            meals.Add(new Drinkdisplay { Image = null, Name = "food", price12 = "25.00", Name_1 = "other food", Image_1 = null, price12_1 = "15.00" });
-            meals.Add(new Drinkdisplay { Image = null, Name = "food", price12 = "25.00", Name_1 = "other food", Image_1 = null, price12_1 = "15.00" });
-            FoodBox.ItemsSource = meals;
         }
 
         public class Drinkdisplay
@@ -73,18 +56,6 @@ namespace Drink_Menu
             tempwindow.Show();
         }
 
-		private void DrinkBox_MouseDoubleClick(object sender, MouseButtonEventArgs e)
-		{
-			Window2 tempWindow = new Drink_Menu.Window2();
-			tempWindow.Show();
-		}
-
-		private void FoodBox_MouseDoubleClick(object sender, MouseButtonEventArgs e)
-		{
-			Window1 tempWindow = new Drink_Menu.Window1();
-			tempWindow.Show();
-		}
-
         private void menuSelector_Click(object sender, RoutedEventArgs e)
         {
             Menushow.Width = 470;
@@ -93,6 +64,45 @@ namespace Drink_Menu
         private void quitmenu_Click(object sender, RoutedEventArgs e)
         {
             Menushow.Width = 0;
+        }
+
+        private void DrinkMain_Click(object sender, RoutedEventArgs e)
+        {
+            DrinkMain.IsEnabled = false;
+            DrinkMain_text.Opacity = 70;
+            DinnerMain.IsEnabled = true;
+            DinnerMain_text.Opacity = 100;
+            BurgerMain.IsEnabled = true;
+            BurgerMain_text.Opacity = 100;
+            pagename_drinkpage.Height = 670;
+            pagename_stackpage.Height = 0;
+        }
+
+        private void DinnerMain_Click(object sender, RoutedEventArgs e)
+        {
+            DrinkMain.IsEnabled = true;
+            DrinkMain_text.Opacity = 100;
+            DinnerMain.IsEnabled = false;
+            DinnerMain_text.Opacity = 70;
+            BurgerMain.IsEnabled = true;
+            BurgerMain_text.Opacity = 100;
+            pagename_stackpage.Height = 670;
+            pagename_drinkpage.Height = 0;
+        }
+
+        private void BurgerMain_Click(object sender, RoutedEventArgs e)
+        {
+            DrinkMain.IsEnabled = true;
+            DrinkMain_text.Opacity = 100;
+            DinnerMain.IsEnabled = true;
+            DinnerMain_text.Opacity = 100;
+            BurgerMain.IsEnabled = false;
+            BurgerMain_text.Opacity = 70;
+        }
+
+        private void pagename_SourceUpdated(object sender, DataTransferEventArgs e)
+        {
+
         }
     }
 }
