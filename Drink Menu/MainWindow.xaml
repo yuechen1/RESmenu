@@ -8,11 +8,39 @@
         Title="MainWindow" Height="720" Width="480">
     <StackPanel HorizontalAlignment="Left" Height="720" VerticalAlignment="Top" Width="470" Margin="0,0,0,-31">
         <StackPanel HorizontalAlignment="Left" Height="50" VerticalAlignment="Top" Width="470" Orientation="Horizontal">
-            <TextBlock x:Name="txtRestName" HorizontalAlignment="Left" Height="50" TextWrapping="Wrap" Text="Dancing Shamrock" Width="319" FontFamily="Segoe UI Black" FontSize="34" Foreground="#FF630C0C" Panel.ZIndex="-2" Margin="0" Background="Black"/>
-            <Button x:Name="btnCall" Click="btnCall_Click" Content="Call" Height="50" VerticalAlignment="Top" Width="60"/>
-            <Button x:Name="btnBill" Click="btnBill_Click" Content="Bill" Height="50" VerticalAlignment="Top" Width="93"/>
+            <Button x:Name="menuSelector" Click="menuSelector_Click" Height="50" VerticalAlignment="Top" Width="50">
+                <StackPanel>
+                    <Image Source="Resources/images/drinkimage.png" RenderOptions.BitmapScalingMode="Fant" Width="50" Height="50" Stretch="Fill" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="0,0,0,0"/>
+                </StackPanel>
+            </Button>
+            <TextBlock x:Name="txtRestName" HorizontalAlignment="Left" Height="50" TextWrapping="Wrap" Width="319" FontFamily="Segoe UI Black" FontSize="34" Foreground="#FF630C0C" Panel.ZIndex="-2" Margin="0" Background="Black"><Run Text="Dancing Shamrock"/></TextBlock>
+            <Button x:Name="btnCall" Click="btnCall_Click" Content="Call" Height="50" VerticalAlignment="Top" Width="50"/>
+            <Button x:Name="btnBill" Click="btnBill_Click" Content="Bill" Height="50" VerticalAlignment="Top" Width="50"/>
         </StackPanel>
-        <StackPanel HorizontalAlignment="Left" Height="637" Width="470" Orientation="Horizontal">
+        <Grid HorizontalAlignment="Left" Height="637" Width="470">
+            <StackPanel x:Name="Menushow" Orientation="Horizontal" Height="720" Width="0" Panel.ZIndex="1" HorizontalAlignment="Left">
+                <StackPanel Orientation="Vertical" Height="720" Width="234" HorizontalAlignment="Left" Background="#FF303030">
+                    <Button IsEnabled="False" >
+                        <StackPanel Orientation="Horizontal" Height="100" Width="234" HorizontalAlignment="Left">
+                            <Image Source="Resources/images/drinkimage.png" RenderOptions.BitmapScalingMode="Fant" Height="100" Width="100" Opacity="70"/>
+                            <TextBlock Text="Drinks" Foreground="#FFFDFDFD" FontSize="40" Opacity="70"/>
+                        </StackPanel>
+                    </Button>
+                    <Button IsEnabled="True" >
+                        <StackPanel Orientation="Horizontal" Height="100" Width="234" HorizontalAlignment="Left">
+                            <Image Source="Resources/images/stakeimage.png" RenderOptions.BitmapScalingMode="Fant" Height="100" Width="100"/>
+                            <TextBlock Text="Dinner" Foreground="Black" FontSize="40" />
+                        </StackPanel>
+                    </Button>
+                    <Button IsEnabled="True" >
+                        <StackPanel Orientation="Horizontal" Height="100" Width="234" HorizontalAlignment="Left">
+                            <Image Source="Resources/images/burgerimage.png" RenderOptions.BitmapScalingMode="Fant" Height="100" Width="100"/>
+                            <TextBlock Text="Burger" Foreground="Black" FontSize="40" />
+                        </StackPanel>
+                    </Button>
+                </StackPanel>
+                <Button x:Name="quitmenu" Click="quitmenu_Click" Height="720" Width="236" Opacity="0"/>
+            </StackPanel>
             <TabControl x:Name="tabControl" Height="627" VerticalAlignment="Top" Width="470" TabStripPlacement="Left">
                 <TabControl.Resources>
                     <Style TargetType="{x:Type TabItem}">
@@ -109,7 +137,7 @@
                     </Grid>
                 </TabItem>
             </TabControl>
-        </StackPanel>
+        </Grid>
     </StackPanel>
 
 </Window>

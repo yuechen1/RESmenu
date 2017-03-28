@@ -84,5 +84,15 @@ namespace Drink_Menu
 			Window1 tempWindow = new Drink_Menu.Window1();
 			tempWindow.Show();
 		}
-	}
+
+        private void menuSelector_Click(object sender, RoutedEventArgs e)
+        {
+            Menushow.Width = 470;
+        }
+
+        private void quitmenu_Click(object sender, RoutedEventArgs e)
+        {
+            Menushow.Width = 0;
+        }
+    }
 }
