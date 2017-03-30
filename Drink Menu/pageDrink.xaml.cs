@@ -33,12 +33,11 @@ namespace Drink_Menu
             items.Add(new Drinkdisplay { Image = null, Name = "suger water", price12 = "8.00", price16 = "10.00", Image_1 = null, Name_1 = "Water", price12_1 = "8.00", price16_1 = "10.00" });
             items.Add(new Drinkdisplay { Image = null, Name = "suger water", price12 = "8.00", price16 = "10.00", Image_1 = null, Name_1 = "Water", price12_1 = "8.00", price16_1 = "10.00" });
             DrinkBox.ItemsSource = items;
+            
         }
 
         private void DrinkBox_MouseDoubleClick(object sender, MouseButtonEventArgs e)
         {
-            Window2 tempWindow = new Drink_Menu.Window2();
-            tempWindow.Show();
         }
 
         private void DrinkBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
@@ -56,6 +55,26 @@ namespace Drink_Menu
             public string Name_1 { get; set; }
             public string price12_1 { get; set; }
             public string price16_1 { get; set; }
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            Button k = (Button)sender;
+            Drinkdisplay drink = k.DataContext as Drinkdisplay;
+            MessageBox.Show(drink.Name);
+
+            Window2 tempWindow = new Drink_Menu.Window2(drink.Name);
+            tempWindow.Show();
+        }
+
+        private void Button1_Click(object sender, RoutedEventArgs e)
+        {
+            Button k = (Button)sender;
+            Drinkdisplay drink = k.DataContext as Drinkdisplay;
+            MessageBox.Show(drink.Name_1);
+
+            Window2 tempWindow = new Drink_Menu.Window2(drink.Name_1);
+            tempWindow.Show();
         }
     }
 }

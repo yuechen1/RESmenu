@@ -19,15 +19,27 @@ namespace Drink_Menu
     /// </summary>
     public partial class Window2 : Window
     {
-        public Window2()
+        public Window2(string name)
         {
             InitializeComponent();
 			List<DrinkData> liquids = new List<DrinkData>();
 			liquids.Add(new Drink_Menu.DrinkData { drinkImage = null, drinkName = "Water", drinkDescription = "H2O." });
+            liquids.Add(new Drink_Menu.DrinkData { drinkImage = null, drinkName = "suger water", drinkDescription = "H2O." });
 
-			//			txtDrinkName.Text = liquids. .drinkName.get();
-			txtDrinkName.Text = "Water";
-			txtDrinkInfo.Text = "H2O.";
+            //search for drink  in liquids based on name
+            DrinkData k = null;
+            foreach (DrinkData i in liquids)
+            {
+                if (String.Compare(i.drinkName, name) == 0)
+                {
+                    k = i;
+                    break;
+                }
+            }
+
+            //			txtDrinkName.Text = liquids. .drinkName.get();
+            txtDrinkName.Text = k.drinkName;
+			txtDrinkInfo.Text = k.drinkDescription;
         }
 
 		private void btnDrinkBack_Click(object sender, RoutedEventArgs e)
