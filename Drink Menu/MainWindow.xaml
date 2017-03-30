@@ -10,7 +10,7 @@
         <StackPanel HorizontalAlignment="Left" Height="50" VerticalAlignment="Top" Width="470" Orientation="Horizontal">
             <Button x:Name="menuSelector" Click="menuSelector_Click" Height="50" VerticalAlignment="Top" Width="50">
                 <StackPanel>
-                    <Image Source="Resources/images/drinkimage.png" RenderOptions.BitmapScalingMode="Fant" Width="50" Height="50" Stretch="Fill" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="0,0,0,0"/>
+                    <Image x:Name="iconimage" Source="Resources/images/drinkimage.png" RenderOptions.BitmapScalingMode="Fant" Width="50" Height="50" Stretch="Fill" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="0,0,0,0"/>
                 </StackPanel>
             </Button>
             <TextBlock x:Name="txtRestName" HorizontalAlignment="Left" Height="50" TextWrapping="Wrap" Width="319" FontFamily="Segoe UI Black" FontSize="34" Foreground="#FF630C0C" Panel.ZIndex="-2" Margin="0" Background="Black"><Run Text="Dancing Shamrock"/></TextBlock>
@@ -20,19 +20,19 @@
         <Grid HorizontalAlignment="Left" Height="637" Width="470">
             <StackPanel x:Name="Menushow" Orientation="Horizontal" Height="720" Width="0" Panel.ZIndex="1" HorizontalAlignment="Left">
                 <StackPanel Orientation="Vertical" Height="720" Width="234" HorizontalAlignment="Left" Background="#FF303030">
-                    <Button x:Name="DrinkMain" Click="DrinkMain_Click" IsEnabled="False" >
-                        <StackPanel Orientation="Horizontal" Height="100" Width="234" HorizontalAlignment="Left">
+                    <Button x:Name="DrinkMain" Click="DrinkMain_Click" IsEnabled="False">
+                        <StackPanel Orientation="Horizontal" Height="100" Width="234" HorizontalAlignment="Left" Opacity="0.5">
                             <Image Source="Resources/images/drinkimage.png" RenderOptions.BitmapScalingMode="Fant" Height="100" Width="100"/>
-                            <TextBlock x:Name="DrinkMain_text" Text="Drinks" Foreground="#FFFDFDFD" FontSize="40" Opacity="70"/>
+                            <TextBlock x:Name="DrinkMain_text" Text="Drinks" Foreground="Black" FontSize="40" Opacity="1"/>
                         </StackPanel>
                     </Button>
-                    <Button x:Name="DinnerMain" Click="DinnerMain_Click" IsEnabled="True" >
+                    <Button x:Name="DinnerMain" Click="DinnerMain_Click" IsEnabled="True" Opacity="1">
                         <StackPanel Orientation="Horizontal" Height="100" Width="234" HorizontalAlignment="Left">
                             <Image Source="Resources/images/stakeimage.png" RenderOptions.BitmapScalingMode="Fant" Height="100" Width="100"/>
                             <TextBlock x:Name="DinnerMain_text" Text="Dinner" Foreground="Black" FontSize="40" />
                         </StackPanel>
                     </Button>
-                    <Button x:Name="BurgerMain" Click="BurgerMain_Click" IsEnabled="True" >
+                    <Button x:Name="BurgerMain" Click="BurgerMain_Click" IsEnabled="True" Opacity="1">
                         <StackPanel Orientation="Horizontal" Height="100" Width="234" HorizontalAlignment="Left">
                             <Image Source="Resources/images/burgerimage.png" RenderOptions.BitmapScalingMode="Fant" Height="100" Width="100"/>
                             <TextBlock x:Name="BurgerMain_text"  Text="Burger" Foreground="Black" FontSize="40" />

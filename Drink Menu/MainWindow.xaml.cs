@@ -69,11 +69,11 @@ namespace Drink_Menu
         private void DrinkMain_Click(object sender, RoutedEventArgs e)
         {
             DrinkMain.IsEnabled = false;
-            DrinkMain_text.Opacity = 70;
+            DrinkMain.Opacity = 0.5;
             DinnerMain.IsEnabled = true;
-            DinnerMain_text.Opacity = 100;
+            DinnerMain.Opacity = 1;
             BurgerMain.IsEnabled = true;
-            BurgerMain_text.Opacity = 100;
+            BurgerMain.Opacity = 1;
             pagename_drinkpage.Height = 670;
             pagename_stackpage.Height = 0;
             Menushow.Width = 0;
@@ -82,11 +82,11 @@ namespace Drink_Menu
         private void DinnerMain_Click(object sender, RoutedEventArgs e)
         {
             DrinkMain.IsEnabled = true;
-            DrinkMain_text.Opacity = 100;
+            DrinkMain.Opacity = 1;
             DinnerMain.IsEnabled = false;
-            DinnerMain_text.Opacity = 70;
+            DinnerMain.Opacity = 0.5;
             BurgerMain.IsEnabled = true;
-            BurgerMain_text.Opacity = 100;
+            BurgerMain.Opacity = 1;
             pagename_stackpage.Height = 670;
             pagename_drinkpage.Height = 0;
             Menushow.Width = 0;
@@ -95,11 +95,11 @@ namespace Drink_Menu
         private void BurgerMain_Click(object sender, RoutedEventArgs e)
         {
             DrinkMain.IsEnabled = true;
-            DrinkMain_text.Opacity = 100;
+            DrinkMain.Opacity = 1;
             DinnerMain.IsEnabled = true;
-            DinnerMain_text.Opacity = 100;
+            DinnerMain.Opacity = 1;
             BurgerMain.IsEnabled = false;
-            BurgerMain_text.Opacity = 70;
+            BurgerMain.Opacity = 0.5;
             Menushow.Width = 0;
         }
 
