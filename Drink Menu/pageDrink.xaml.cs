@@ -25,8 +25,8 @@ namespace Drink_Menu
             InitializeComponent();
             List<Drinkdisplay> items = new List<Drinkdisplay>();
             items.Add(new Drinkdisplay { Image = null, Name = "suger water", price12 = "8.00", price16 = "10.00", Image_1 = null, Name_1 = "Water", price12_1 = "8.00", price16_1 = "10.00" });
-            items.Add(new Drinkdisplay { Image = null, Name = "suger water", price12 = "8.00", price16 = "10.00", Image_1 = null, Name_1 = "Water", price12_1 = "8.00", price16_1 = "10.00" });
-            items.Add(new Drinkdisplay { Image = null, Name = "suger water", price12 = "8.00", price16 = "10.00", Image_1 = null, Name_1 = "Water", price12_1 = "8.00", price16_1 = "10.00" });
+            items.Add(new Drinkdisplay { Image = null, Name = "suger water1", price12 = "8.00", price16 = "10.00", Image_1 = null, Name_1 = "Water1", price12_1 = "8.00", price16_1 = "10.00" });
+            items.Add(new Drinkdisplay { Image = null, Name = "suger water2", price12 = "8.00", price16 = "10.00", Image_1 = null, Name_1 = "Water2", price12_1 = "8.00", price16_1 = "10.00" });
             items.Add(new Drinkdisplay { Image = null, Name = "suger water", price12 = "8.00", price16 = "10.00", Image_1 = null, Name_1 = "Water", price12_1 = "8.00", price16_1 = "10.00" });
             items.Add(new Drinkdisplay { Image = null, Name = "suger water", price12 = "8.00", price16 = "10.00", Image_1 = null, Name_1 = "Water", price12_1 = "8.00", price16_1 = "10.00" });
             items.Add(new Drinkdisplay { Image = null, Name = "suger water", price12 = "8.00", price16 = "10.00", Image_1 = null, Name_1 = "Water", price12_1 = "8.00", price16_1 = "10.00" });

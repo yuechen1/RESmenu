@@ -25,6 +25,10 @@ namespace Drink_Menu
 			List<DrinkData> liquids = new List<DrinkData>();
 			liquids.Add(new Drink_Menu.DrinkData { drinkImage = null, drinkName = "Water", drinkDescription = "H2O." });
             liquids.Add(new Drink_Menu.DrinkData { drinkImage = null, drinkName = "suger water", drinkDescription = "H2O." });
+            liquids.Add(new Drink_Menu.DrinkData { drinkImage = null, drinkName = "Water1", drinkDescription = "H2O." });
+            liquids.Add(new Drink_Menu.DrinkData { drinkImage = null, drinkName = "suger water1", drinkDescription = "H2O." });
+            liquids.Add(new Drink_Menu.DrinkData { drinkImage = null, drinkName = "Water2", drinkDescription = "H2O." });
+            liquids.Add(new Drink_Menu.DrinkData { drinkImage = null, drinkName = "suger water2", drinkDescription = "H2O." });
 
             //search for drink  in liquids based on name
             DrinkData k = null;
