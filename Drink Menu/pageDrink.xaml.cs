@@ -23,16 +23,44 @@ namespace Drink_Menu
         public Page1()
         {
             InitializeComponent();
-            List<Drinkdisplay> items = new List<Drinkdisplay>();
-            items.Add(new Drinkdisplay { Image = null, Name = "suger water", price12 = "8.00", price16 = "10.00", Image_1 = null, Name_1 = "Water", price12_1 = "8.00", price16_1 = "10.00" });
-            items.Add(new Drinkdisplay { Image = null, Name = "suger water1", price12 = "8.00", price16 = "10.00", Image_1 = null, Name_1 = "Water1", price12_1 = "8.00", price16_1 = "10.00" });
-            items.Add(new Drinkdisplay { Image = null, Name = "suger water2", price12 = "8.00", price16 = "10.00", Image_1 = null, Name_1 = "Water2", price12_1 = "8.00", price16_1 = "10.00" });
-            items.Add(new Drinkdisplay { Image = null, Name = "suger water", price12 = "8.00", price16 = "10.00", Image_1 = null, Name_1 = "Water", price12_1 = "8.00", price16_1 = "10.00" });
-            items.Add(new Drinkdisplay { Image = null, Name = "suger water", price12 = "8.00", price16 = "10.00", Image_1 = null, Name_1 = "Water", price12_1 = "8.00", price16_1 = "10.00" });
-            items.Add(new Drinkdisplay { Image = null, Name = "suger water", price12 = "8.00", price16 = "10.00", Image_1 = null, Name_1 = "Water", price12_1 = "8.00", price16_1 = "10.00" });
-            items.Add(new Drinkdisplay { Image = null, Name = "suger water", price12 = "8.00", price16 = "10.00", Image_1 = null, Name_1 = "Water", price12_1 = "8.00", price16_1 = "10.00" });
-            items.Add(new Drinkdisplay { Image = null, Name = "suger water", price12 = "8.00", price16 = "10.00", Image_1 = null, Name_1 = "Water", price12_1 = "8.00", price16_1 = "10.00" });
-            DrinkBox.ItemsSource = items;
+
+            List<MainWindow.Drinkdisplay> drinkshowcase = new List<MainWindow.Drinkdisplay>();
+            int i = 0;
+            int tempmax = MainWindow.drinks.Count;
+            while( i < tempmax)
+            {
+                if((i+1) <= tempmax)
+                {
+                    drinkshowcase.Add(new MainWindow.Drinkdisplay
+                    {
+                        Image = MainWindow.drinks[i].Image,
+                        Name = MainWindow.drinks[i].Name,
+                        price12 = MainWindow.drinks[i].price12,
+                        price16 = MainWindow.drinks[i].price16,
+                        Image_1 = MainWindow.drinks[i + 1].Image,
+                        Name_1 = MainWindow.drinks[i + 1].Name,
+                        price12_1 = MainWindow.drinks[i + 1].price12,
+                        price16_1 = MainWindow.drinks[i + 1].price16
+                    });
+                }
+                else
+                {
+                    drinkshowcase.Add(new MainWindow.Drinkdisplay
+                    {
+                        Image = MainWindow.drinks[i].Image,
+                        Name = MainWindow.drinks[i].Name,
+                        price12 = MainWindow.drinks[i].price12,
+                        price16 = MainWindow.drinks[i].price16,
+                        Image_1 = null,
+                        Name_1 = null,
+                        price12_1 = null,
+                        price16_1 = null
+                    });
+                }
+                i++;
+                i++;
+            }
+            DrinkBox.ItemsSource = drinkshowcase;
             
         }
 
@@ -45,23 +73,10 @@ namespace Drink_Menu
 
         }
 
-        public class Drinkdisplay
-        {
-            public string Image { get; set; }
-            public string Name { get; set; }
-            public string price12 { get; set; }
-            public string price16 { get; set; }
-            public string Image_1 { get; set; }
-            public string Name_1 { get; set; }
-            public string price12_1 { get; set; }
-            public string price16_1 { get; set; }
-        }
-
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             Button k = (Button)sender;
-            Drinkdisplay drink = k.DataContext as Drinkdisplay;
-            MessageBox.Show(drink.Name);
+            MainWindow.Drinkdisplay drink = k.DataContext as MainWindow.Drinkdisplay;
 
             Window2 tempWindow = new Drink_Menu.Window2(drink.Name);
             tempWindow.Show();
@@ -70,8 +85,7 @@ namespace Drink_Menu
         private void Button1_Click(object sender, RoutedEventArgs e)
         {
             Button k = (Button)sender;
-            Drinkdisplay drink = k.DataContext as Drinkdisplay;
-            MessageBox.Show(drink.Name_1);
+            MainWindow.Drinkdisplay drink = k.DataContext as MainWindow.Drinkdisplay;
 
             Window2 tempWindow = new Drink_Menu.Window2(drink.Name_1);
             tempWindow.Show();

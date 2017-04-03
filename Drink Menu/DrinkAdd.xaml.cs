@@ -22,19 +22,12 @@ namespace Drink_Menu
         public Window2(string name)
         {
             InitializeComponent();
-			List<DrinkData> liquids = new List<DrinkData>();
-			liquids.Add(new Drink_Menu.DrinkData { drinkImage = null, drinkName = "Water", drinkDescription = "H2O." });
-            liquids.Add(new Drink_Menu.DrinkData { drinkImage = null, drinkName = "suger water", drinkDescription = "H2O." });
-            liquids.Add(new Drink_Menu.DrinkData { drinkImage = null, drinkName = "Water1", drinkDescription = "H2O." });
-            liquids.Add(new Drink_Menu.DrinkData { drinkImage = null, drinkName = "suger water1", drinkDescription = "H2O." });
-            liquids.Add(new Drink_Menu.DrinkData { drinkImage = null, drinkName = "Water2", drinkDescription = "H2O." });
-            liquids.Add(new Drink_Menu.DrinkData { drinkImage = null, drinkName = "suger water2", drinkDescription = "H2O." });
 
             //search for drink  in liquids based on name
-            DrinkData k = null;
-            foreach (DrinkData i in liquids)
+            MainWindow.DrinkItem k = null;
+            foreach (MainWindow.DrinkItem i in MainWindow.drinks)
             {
-                if (String.Compare(i.drinkName, name) == 0)
+                if (String.Compare(i.Name, name) == 0)
                 {
                     k = i;
                     break;
@@ -42,20 +35,16 @@ namespace Drink_Menu
             }
 
             //			txtDrinkName.Text = liquids. .drinkName.get();
-            txtDrinkName.Text = k.drinkName;
-			txtDrinkInfo.Text = k.drinkDescription;
+            txtDrinkName.Text = k.Name;
+			txtDrinkInfo.Text = k.description;
+            rdoSmallDrink.Content = "16oz: " + k.price12;
+            rdoLargeDrink.Content = "20oz: " + k.price16;
+            imgDrinkPicture.Source = k.Image;
         }
 
 		private void btnDrinkBack_Click(object sender, RoutedEventArgs e)
 		{
 			this.Close();
 		}
-	}
-
-	public class DrinkData
-	{
-		public string drinkImage { get; set; }
-		public string drinkName { get; set; }
-		public string drinkDescription { get; set; }
 	}
 }

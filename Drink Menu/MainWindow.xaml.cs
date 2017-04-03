@@ -20,18 +20,35 @@ namespace Drink_Menu
     /// </summary>
     public partial class MainWindow : Window
     {
+
+        public static List<DrinkItem> drinks =  new List<DrinkItem>();
+        public static List<FoodItem> food = new List<FoodItem>();
+
         public MainWindow()
         {
             InitializeComponent();
+            //add drink items
+            drinks.Add(new DrinkItem { Image = null, Name = "Water", price12 = "0.00", price16 = "0.00", description = "The best tap water you can find" });
+            drinks.Add(new DrinkItem { Image = null, Name = "Light Beer", price12 = "6.50", price16 = "8.00", description = "Genaric light beer" });
+            drinks.Add(new DrinkItem { Image = null, Name = "Beer", price12 = "6.50", price16 = "8.00", description = "Some Beer" });
+            drinks.Add(new DrinkItem { Image = null, Name = "Bear", price12 = "8.00", price16 = "12.00", description = "Real Bear? I don't know" });
+            drinks.Add(new DrinkItem { Image = null, Name = "Red Wine", price12 = "12.00", price16 = "35.00", description = "WHY ARE YOU READING THIS?" });
+            drinks.Add(new DrinkItem { Image = null, Name = "White Wine", price12 = "12.00", price16 = "35.00", description = "DO YOU LOOK AT EVERY SINGLE ONE?" });
+            drinks.Add(new DrinkItem { Image = null, Name = "Drink 1", price12 = "7.00", price16 = "9.00", description = "WHY AM I EVEN WRITING THESE" });
+            drinks.Add(new DrinkItem { Image = null, Name = "Moonshine", price12 = "6.50", price16 = "8.50", description = "NO HOPE IN HERE" });
+            drinks.Add(new DrinkItem { Image = null, Name = "Banana Flush", price12 = "5.50", price16 = "10.00", description = "I DON\'T EVEN KNOW WHAT TO WRITE" });
+            drinks.Add(new DrinkItem { Image = null, Name = "Drink 2", price12 = "3.00", price16 = "5.00", description = "ARE THERE EVEN MORE THAN 10 DRINKS?" });
+            drinks.Add(new DrinkItem { Image = null, Name = "Almost Out of Ideas", price12 = "30.00", price16 = "50.00", description = "WHAT DO PEOPLE THINK ABOUT WHEN DRINKING?" });
+            drinks.Add(new DrinkItem { Image = null, Name = "Out of Ideas", price12 = "60.00", price16 = "120.00", description = "THIS IS THE LAST ONE" });
         }
 
         public class Drinkdisplay
         {
-            public string Image { get; set; }
+            public ImageSource Image { get; set; }
             public string Name { get; set; }
             public string price12 { get; set; }
             public string price16 { get; set; }
-            public string Image_1 { get; set; }
+            public ImageSource Image_1 { get; set; }
             public string Name_1 { get; set; }
             public string price12_1 { get; set; }
             public string price16_1 { get; set; }
@@ -39,10 +56,33 @@ namespace Drink_Menu
 
         public class DrinkItem
         {
-            public string Image { get; set; }
+            public ImageSource Image { get; set; }
             public string Name { get; set; }
             public string price12 { get; set; }
             public string price16 { get; set; }
+            public string description { get; set; }
+
+        }
+
+        public class FoodItem
+        {
+            public string Image1 { set; get; }
+            public string Image2 { set; get; }
+            public List<ingredient> ingredients { set; get; }
+            public string description { set; get; }
+            public string name { set; get; }
+            public List<string> allergy { set; get; }
+
+            public void addingredient(ingredient x)
+            {
+                this.ingredients.Add(x);
+            }
+
+            public void removeingredient(ingredient x)
+            {
+                this.ingredients.Remove(x);
+            }
+
         }
 
         private void btnCall_Click(object sender, RoutedEventArgs e)
