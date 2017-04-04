@@ -64,10 +64,6 @@ namespace Drink_Menu
             
         }
 
-        private void DrinkBox_MouseDoubleClick(object sender, MouseButtonEventArgs e)
-        {
-        }
-
         private void DrinkBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
 

@@ -10,9 +10,9 @@
         <Image x:Name="imgDrinkPicture" HorizontalAlignment="Left" Height="90" Source="{Binding drinkImage}" VerticalAlignment="Top" Width="98"/>
         <TextBlock x:Name="txtDrinkName" HorizontalAlignment="Left" Height="58" Margin="98,0,0,0" Text="{Binding drinkName}" VerticalAlignment="Top" Width="194" FontSize="30" TextBlock.TextAlignment="Center"/>
         <TextBlock x:Name="txtDrinkInfo" HorizontalAlignment="Left" Height="65" Margin="10,95,0,0" Text="{Binding drinkDescription}" VerticalAlignment="Top" Width="272"/>
-        <RadioButton x:Name="rdoSmallDrink" Content="{Binding price_small}" HorizontalAlignment="Left" Height="18" Margin="51,191,0,0" VerticalAlignment="Top" Width="87" Background="{x:Null}"/>
+        <RadioButton x:Name="rdoSmallDrink" Content="{Binding price_small}" HorizontalAlignment="Left" Height="18" Margin="51,191,0,0" VerticalAlignment="Top" Width="87" Background="{x:Null}" IsChecked="True"/>
         <RadioButton x:Name="rdoLargeDrink" Content="{Binding price_large}" HorizontalAlignment="Left" Height="18" Margin="173,191,0,0" VerticalAlignment="Top" Width="87" Background="{x:Null}"/>
-        <Button x:Name="btnDrinkBack" Content="Back" HorizontalAlignment="Left" Height="33" Margin="10,226,0,0" VerticalAlignment="Top" Width="29" Click="btnDrinkBack_Click"/>
-        <Button x:Name="btnDrinkAccept" Content="Add" HorizontalAlignment="Left" Height="33" Margin="253,226,0,0" VerticalAlignment="Top" Width="29"/>
+        <Button x:Name="btnDrinkBack" Content="Back" HorizontalAlignment="Left" Height="33" Margin="10,226,0,0" VerticalAlignment="Top" Width="56" Click="btnDrinkBack_Click"/>
+        <Button x:Name="btnDrinkAccept" Content="Add" HorizontalAlignment="Left" Height="33" Margin="231,226,0,0" VerticalAlignment="Top" Width="51" Click="btnDrinkAccept_Click"/>
     </Grid>
 </Window>

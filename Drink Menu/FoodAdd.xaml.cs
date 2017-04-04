@@ -22,10 +22,10 @@ namespace Drink_Menu
         public Window3()
         {
             InitializeComponent();
-            List<ingredient> recipe = new List<ingredient>();
-            recipe.Add(new ingredient { name = "Salt", price = "$0.00" });
-            recipe.Add(new ingredient { name = "Pepper", price = "$0.00" });
-            recipe.Add(new ingredient { name = "BBQ Sauce", price = "$0.00" });
+            List<MainWindow.ingredient> recipe = new List<MainWindow.ingredient>();
+            recipe.Add(new MainWindow.ingredient("Salt", "$0.00"));
+            recipe.Add(new MainWindow.ingredient("Pepper", "$0.00"));
+            recipe.Add(new MainWindow.ingredient("BBQ Sauce", "$0.00"));
             lbxIngredientList.ItemsSource = recipe;
         }
 

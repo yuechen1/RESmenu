@@ -10,34 +10,12 @@
         <StackPanel HorizontalAlignment="Left" Height="50" VerticalAlignment="Top" Width="470" Orientation="Horizontal">
             <TextBlock x:Name="txtRestName" HorizontalAlignment="Left" Height="50" TextWrapping="Wrap" Text="Dancing Shamrock" Width="319" FontFamily="Segoe UI Black" FontSize="34" Foreground="#FF630C0C" Panel.ZIndex="-2" Margin="0" Background="Black"/>
             <Button x:Name="btnCall" Content="Call" Height="50" VerticalAlignment="Top" Width="60"/>
-            <Button x:Name="btnBill" Content="Bill" Height="50" VerticalAlignment="Top" Width="93" IsEnabled="False"/>
+            <Button x:Name="btnBill" Content=" Split Bill" Height="50" VerticalAlignment="Top" Width="93" IsEnabled="False"/>
         </StackPanel>
         <StackPanel HorizontalAlignment="Left" Height="637" Width="470" Orientation="Horizontal">
-            <TabControl x:Name="tabControl" Height="637" VerticalAlignment="Top" Width="30" TabStripPlacement="Left">
-                <TabControl.Resources>
-                    <Style TargetType="{x:Type TabItem}">
-                        <Setter Property="HeaderTemplate">
-                            <Setter.Value>
-                                <DataTemplate>
-                                    <ContentPresenter Content="{TemplateBinding Content}">
-                                        <ContentPresenter.LayoutTransform>
-                                            <RotateTransform Angle="270" />
-                                        </ContentPresenter.LayoutTransform>
-                                    </ContentPresenter>
-                                </DataTemplate>
-                            </Setter.Value>
-                        </Setter>
-                        <Setter Property="Padding" Value="3" />
-                    </Style>
-                </TabControl.Resources>
-                <TabItem Header="Drinks" Margin="0,0,0,0" Height="175" VerticalAlignment="Top"/>
-                <TabItem Header="Food" Margin="0,0,0,0" Height="175" VerticalAlignment="Top"/>
-                <TabItem Header="Special" Margin="0,0,0,0" Height="175" VerticalAlignment="Top"/>
-            </TabControl>
-            <Grid Height="637" VerticalAlignment="Top" Width="440">
-                <Button x:Name="btnSplit" Content="Split Bill" HorizontalAlignment="Left" Height="46" Margin="348,0,0,0" VerticalAlignment="Top" Width="92"/>
+            <Grid Height="637" VerticalAlignment="Top" Width="472">
                 <TextBlock x:Name="txtTableNumber" HorizontalAlignment="Left" Height="46" TextWrapping="Wrap" VerticalAlignment="Top" Width="247"><Run FontSize="36" Text="Table #1"/></TextBlock>
-                <ListBox x:Name="lbxPriceBox" HorizontalAlignment="Left" Height="389" Margin="10,51,0,0" VerticalAlignment="Top" Width="354">
+                <ListBox x:Name="lbxPriceBox" HorizontalAlignment="Left" Height="389" Margin="64,56,0,0" VerticalAlignment="Top" Width="354" ScrollViewer.HorizontalScrollBarVisibility="Disabled">
                     <ListBox.ItemTemplate>
                         <DataTemplate>
                             <StackPanel HorizontalAlignment="Left" Height="40" Width="354" Orientation="Horizontal">
@@ -47,10 +25,10 @@
                         </DataTemplate>
                     </ListBox.ItemTemplate>
                 </ListBox>
-                <Button x:Name="btnBillBack" Content="Back" HorizontalAlignment="Left" Height="42" Margin="0,590,0,0" VerticalAlignment="Top" Width="57" Click="btnBillBack_Click"/>
-                <Button x:Name="btnCash" Content="Pay with Cash" HorizontalAlignment="Left" Height="42" Margin="348,590,0,0" VerticalAlignment="Top" Width="82"/>
-                <Button x:Name="btnCard" Content="Pay with Debit/Credit" HorizontalAlignment="Left" Height="42" Margin="211,590,0,0" VerticalAlignment="Top" Width="137"/>
-                <StackPanel HorizontalAlignment="Left" Height="120" Margin="247,445,0,0" VerticalAlignment="Top" Width="120">
+                <Button x:Name="btnBillBack" Content="Back" HorizontalAlignment="Left" Height="42" Margin="10,585,0,0" VerticalAlignment="Top" Width="57" Click="btnBillBack_Click"/>
+                <Button x:Name="btnCash" Content="Pay with Cash" HorizontalAlignment="Left" Height="42" Margin="380,590,0,0" VerticalAlignment="Top" Width="82"/>
+                <Button x:Name="btnCard" Content="Pay with Debit/Credit" HorizontalAlignment="Left" Height="42" Margin="243,590,0,0" VerticalAlignment="Top" Width="137"/>
+                <StackPanel HorizontalAlignment="Left" Height="120" Margin="298,445,0,0" VerticalAlignment="Top" Width="120">
                     <StackPanel HorizontalAlignment="Right" Height="40" Width="120" VerticalAlignment="Top" Orientation="Horizontal">
                         <TextBlock Text="  Subtotal: " Height="40"/>
                         <TextBlock x:Name="view_subtotal" Height="40" HorizontalAlignment="Right"/>

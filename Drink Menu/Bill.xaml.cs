@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -19,18 +20,40 @@ namespace Drink_Menu
     /// </summary>
     public partial class Window5 : Window
     {
-        public string subtotal = "n//a";
-        public string tax = "n//a";
+        public List<ShowFood> items = new List<ShowFood>();
 
         public Window5()
         {
             InitializeComponent();
-            List<Food1> items = new List<Food1>();
-            items.Add(new Drink_Menu.Food1 { Name = "Steak", Price = "$25.00" });
-            lbxPriceBox.ItemsSource = items;
-            view_subtotal.Text = "$25.00";
-            view_tax.Text = "$1.25";
-            view_finaltotal.Text = "$26.25";
+            //add all drink items
+            foreach (MainWindow.DrinkItem i in MainWindow.orderedDrinks)
+            {
+                if (i.issmall)
+                {
+                    this.items.Add(new ShowFood(i.Name, i.price12));
+                }
+                else
+                {
+                    this.items.Add(new ShowFood(i.Name, i.price16));
+                }
+            }
+
+            double tempprice = 0;
+            double temptax;
+            double tempfinal;
+
+            foreach(ShowFood i in items)
+            {
+                tempprice = tempprice + Double.Parse(i.Price);
+            }
+            temptax = tempprice * 0.05;
+            tempfinal = temptax + tempprice;
+
+            lbxPriceBox.ItemsSource = this.items;
+
+            view_subtotal.Text = tempprice.ToString();
+            view_tax.Text = temptax.ToString();
+            view_finaltotal.Text = tempprice.ToString();
         }
 
 		private void btnBillBack_Click(object sender, RoutedEventArgs e)
@@ -39,8 +62,14 @@ namespace Drink_Menu
 		}
 	}
 
-	public class Food1
+	public class ShowFood
     {
+        public ShowFood(string a, string b)
+        {
+            this.Name = a;
+            this.Price = b;
+        }
+
         public string Name { get; set; }
         public string Price { get; set; }
     }

@@ -22,11 +22,11 @@ namespace Drink_Menu
         public Window1()
         {
             InitializeComponent();
-			List<ingredient> recipe = new List<ingredient>();
-			recipe.Add(new ingredient { name = "Steak", price = "$25.00" });
-			recipe.Add(new ingredient { name = "Salt", price = "$0.00" });
-			recipe.Add(new ingredient { name = "Pepper", price = "$0.00" });
-			recipe.Add(new ingredient { name = "BBQ Sauce", price = "$0.00" });
+			List<MainWindow.ingredient> recipe = new List<MainWindow.ingredient>();
+			recipe.Add(new MainWindow.ingredient("Steak", "$25.00"));
+			recipe.Add(new MainWindow.ingredient("Salt", "$0.00" ));
+			recipe.Add(new MainWindow.ingredient("Pepper", "$0.00"));
+			recipe.Add(new MainWindow.ingredient("BBQ Sauce", "$0.00"));
 
 			Food info = new Drink_Menu.Food { Image1 = null, Image2 = null, ingredients = recipe };
 			lbxIngredientList.ItemsSource = recipe;
@@ -61,12 +61,6 @@ namespace Drink_Menu
     {
         public string Image1 { set; get; }
         public string Image2 { set; get; }
-        public List<ingredient> ingredients { set; get; }
-    }
-
-    public class ingredient
-    {
-        public string name { set; get; }
-        public string price { set; get; }
+        public List<MainWindow.ingredient> ingredients { set; get; }
     }
 }

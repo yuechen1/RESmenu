@@ -19,17 +19,18 @@ namespace Drink_Menu
     /// </summary>
     public partial class Window2 : Window
     {
+        private MainWindow.DrinkItem k;
+
         public Window2(string name)
         {
             InitializeComponent();
 
             //search for drink  in liquids based on name
-            MainWindow.DrinkItem k = null;
             foreach (MainWindow.DrinkItem i in MainWindow.drinks)
             {
                 if (String.Compare(i.Name, name) == 0)
                 {
-                    k = i;
+                    this.k = i.copy();
                     break;
                 }
             }
@@ -46,5 +47,20 @@ namespace Drink_Menu
 		{
 			this.Close();
 		}
-	}
+
+        private void btnDrinkAccept_Click(object sender, RoutedEventArgs e)
+        {
+            if (rdoSmallDrink.IsChecked == true)
+            {
+                MainWindow.orderedDrinks.Add(this.k);
+                this.Close();
+            }
+            else
+            {
+                this.k.issmall = false;
+                MainWindow.orderedDrinks.Add(this.k);
+                this.Close();
+            }
+        }
+    }
 }
