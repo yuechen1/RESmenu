@@ -9,35 +9,34 @@
       Title="Page2">
     <Grid>
         <ListBox Name="FoodBox" HorizontalAlignment="Left" Height="627" Margin="0,0,0,0" VerticalAlignment="Top" Width="470" 
-                 MouseDoubleClick="FoodBox_MouseDoubleClick"
                  ScrollViewer.HorizontalScrollBarVisibility="Disabled">
             <ListBox.ItemTemplate>
                 <DataTemplate>
                     <StackPanel HorizontalAlignment="Left" Height="100" Width="470" Orientation="Horizontal">
-                        <StackPanel HorizontalAlignment="Left" Height="100" Width="220" Orientation="Horizontal">
-                            <Image Source="{Binding Image}" Height="100" Width="50"/>
-                            <StackPanel HorizontalAlignment="Left" Height="100" Width="170" Orientation="Vertical">
-                                <TextBlock Text="{Binding Name}" FontWeight="Bold"/>
-                                <StackPanel HorizontalAlignment="Left" Height="100" Width="170" Orientation="Horizontal">
-                                    <TextBlock Text="12oz: $"/>
-                                    <TextBlock Text="{Binding price12}"/>
-                                    <TextBlock Text="   16oz: $"/>
-                                    <TextBlock Text="{Binding price16}"/>
+                        <Button x:Name="item" Click="item_Click">
+                            <StackPanel HorizontalAlignment="Left" Height="100" Width="220" Orientation="Horizontal">
+                                <Image Source="{Binding Image}" Height="100" Width="50"/>
+                                <StackPanel HorizontalAlignment="Left" Height="100" Width="170" Orientation="Vertical">
+                                    <StackPanel HorizontalAlignment="Left" Orientation="Horizontal" Height="20" Width="170">
+                                        <TextBlock Text="{Binding Name}" FontWeight="Bold" Width="140"/>
+                                        <TextBlock Text="{Binding price}" Width="30"/>
+                                    </StackPanel>
+                                    <TextBlock Text="{Binding ingredentlist}" Height="80" Width="170" TextWrapping="WrapWithOverflow"/>
                                 </StackPanel>
                             </StackPanel>
-                        </StackPanel>
-                        <StackPanel HorizontalAlignment="Left" Height="100" Width="220" Orientation="Horizontal">
-                            <Image Source="{Binding Image_1}" Height="100" Width="50"/>
-                            <StackPanel HorizontalAlignment="Left" Height="100" Width="170" Orientation="Vertical">
-                                <TextBlock Text="{Binding Name_1}" FontWeight="Bold"/>
-                                <StackPanel HorizontalAlignment="Left" Height="100" Width="170" Orientation="Horizontal">
-                                    <TextBlock Text="12oz: $"/>
-                                    <TextBlock Text="{Binding price12_1}"/>
-                                    <TextBlock Text="   16oz: $"/>
-                                    <TextBlock Text="{Binding price16_1}"/>
+                        </Button>
+                        <Button x:Name="item1" Click="item1_Click">
+                            <StackPanel HorizontalAlignment="Left" Height="100" Width="220" Orientation="Horizontal">
+                                <Image Source="{Binding Image_1}" Height="100" Width="50"/>
+                                <StackPanel HorizontalAlignment="Left" Height="100" Width="170" Orientation="Vertical">
+                                    <StackPanel HorizontalAlignment="Left" Orientation="Horizontal" Height="20" Width="170">
+                                        <TextBlock Text="{Binding Name_1}" FontWeight="Bold" Width="140"/>
+                                        <TextBlock Text="{Binding price_1}" Width="30"/>
+                                    </StackPanel>
+                                    <TextBlock Text="{Binding ingredentlist_1}" Height="80" Width="170" TextWrapping="WrapWithOverflow"/>
                                 </StackPanel>
                             </StackPanel>
-                        </StackPanel>
+                        </Button>
                     </StackPanel>
                 </DataTemplate>
             </ListBox.ItemTemplate>

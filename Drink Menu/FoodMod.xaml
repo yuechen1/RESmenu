@@ -5,60 +5,61 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Drink_Menu"
         mc:Ignorable="d"
-        Title="FoodEditWindow" Height="780" Width="480">
+        Title="FoodEditWindow" Height="720" Width="480">
     <StackPanel HorizontalAlignment="Left" Height="720" VerticalAlignment="Top" Width="480" Margin="0,0,0,-31">
         <StackPanel HorizontalAlignment="Left" Height="50" VerticalAlignment="Top" Width="470" Orientation="Horizontal">
             <TextBlock x:Name="txtRestName" HorizontalAlignment="Left" Height="50" TextWrapping="Wrap" Text="Dancing Shamrock" Width="319" FontFamily="Segoe UI Black" FontSize="34" Foreground="#FF630C0C" Panel.ZIndex="-2" Margin="0" Background="Black"/>
             <Button x:Name="btnCall" Content="Call" Height="50" VerticalAlignment="Top" Width="60"/>
             <Button x:Name="btnBill" Content="Bill" Height="50" VerticalAlignment="Top" Width="93"/>
         </StackPanel>
-        <StackPanel HorizontalAlignment="Left" Height="637" Width="470" Orientation="Horizontal">
-            <TabControl x:Name="tabControl" Height="720" VerticalAlignment="Top" Width="30" TabStripPlacement="Left" Margin="0,0,0,-59">
-                <TabControl.Resources>
-                    <Style TargetType="{x:Type TabItem}">
-                        <Setter Property="HeaderTemplate">
-                            <Setter.Value>
-                                <DataTemplate>
-                                    <ContentPresenter Content="{TemplateBinding Content}">
-                                        <ContentPresenter.LayoutTransform>
-                                            <RotateTransform Angle="270" />
-                                        </ContentPresenter.LayoutTransform>
-                                    </ContentPresenter>
-                                </DataTemplate>
-                            </Setter.Value>
-                        </Setter>
-                        <Setter Property="Padding" Value="3" />
-                    </Style>
-                </TabControl.Resources>
-                <TabItem Header="Drinks" Margin="0,0,0,0" Height="175" VerticalAlignment="Top"/>
-                <TabItem Header="Food" Margin="0,0,0,0" Height="175" VerticalAlignment="Top"/>
-                <TabItem Header="Special" Margin="0,0,0,0" Height="175" VerticalAlignment="Top"/>
-            </TabControl>
-            <Grid Height="720" Margin="0,0,0,-83" VerticalAlignment="Top" Width="440">
-                <TextBlock x:Name="txtFoodInfo" HorizontalAlignment="Left" Height="168" Margin="252,205,0,0" TextWrapping="Wrap" Text="{Binding description}" VerticalAlignment="Top" Width="154"/>
-                <ListBox x:Name="lbxIngredientList" HorizontalAlignment="Left" Height="458" Margin="31,52,0,0" VerticalAlignment="Top" Width="200">
+        <StackPanel x:Name="Addmenu" Height="0" Width="470" Panel.ZIndex="2">
+            <Grid Background="White" Height="637" Width="470">
+                <TextBlock x:Name="txtAddInfo" HorizontalAlignment="Left" Height="40" TextWrapping="Wrap" Text="Please select the ingredients you would like to add to your order:" VerticalAlignment="Top" Width="450" Margin="10,10,0,0" FontSize="15"/>
+                <ListBox x:Name="IngredientList" HorizontalAlignment="Left" Height="520" VerticalAlignment="Top" Width="470" Margin="0,55,0,0">
                     <ListBox.ItemTemplate>
                         <DataTemplate>
-                            <StackPanel HorizontalAlignment="Left" Height="40" Width="200" Orientation="Horizontal">
-                                <TextBlock x:Name="contentName" Text="{Binding name}" Width="140"/>
-                                <Button x:Name="something" Content="remove" Width="60"/>
+                            <StackPanel HorizontalAlignment="Left" Height="50" Width="450" Orientation="Horizontal">
+                                <CheckBox x:Name="checkBox" IsChecked="{Binding Path=check, Mode=TwoWay}" Content="{Binding name}" Height="50" Width="340"/>
+                                <TextBlock x:Name="contentprice" Text="{Binding price}" Width="50" Height="50"/>
                             </StackPanel>
                         </DataTemplate>
                     </ListBox.ItemTemplate>
                 </ListBox>
-                <Button x:Name="btnModBack" Content="Back" HorizontalAlignment="Left" Height="39" Margin="31,535,0,0" VerticalAlignment="Top" Width="39" Click="btnModBack_Click"/>
-                <Button x:Name="btnModAdd" Content="Add" HorizontalAlignment="Left" Height="39" Margin="350,535,0,0" VerticalAlignment="Top" Width="39" Click="btnModAdd_Click"/>
-                <TabControl x:Name="ItemImage" HorizontalAlignment="Left" Height="149" Margin="252,52,0,0" VerticalAlignment="Top" Width="166" TabStripPlacement="Bottom">
+                <Button x:Name="btnFoodAddBack" Content="Back" HorizontalAlignment="Left" Height="29" Margin="10,598,0,0" VerticalAlignment="Top" Width="54" Click="btnFoodAddBack_Click"/>
+                <Button x:Name="btnFoodAddAccept" Content="Add" HorizontalAlignment="Left" Height="29" Margin="406,598,0,0" VerticalAlignment="Top" Width="54" Click="btnFoodAddAccept_Click"/>
+            </Grid>
+        </StackPanel>
+        <StackPanel HorizontalAlignment="Left" Height="637" Width="470" Orientation="Horizontal">
+            <Grid Height="637" VerticalAlignment="Top" Width="471">
+                <TextBlock x:Name="txtFoodInfo" HorizontalAlignment="Left" Height="179" Margin="281,228,0,0" TextWrapping="Wrap" Text="{Binding description}" VerticalAlignment="Top" Width="166"/>
+                <ListBox x:Name="lbxIngredientList" HorizontalAlignment="Left" Height="440" Margin="52,57,0,0" VerticalAlignment="Top" Width="200" BorderThickness="0" 
+                         ScrollViewer.HorizontalScrollBarVisibility="Disabled" >
+                    <ListBox.ItemTemplate>
+                        <DataTemplate>
+                            <StackPanel HorizontalAlignment="Left" Height="40" Width="200" Orientation="Horizontal">
+                                <TextBlock x:Name="contentName" Text="{Binding name}" Width="170" FontSize="16" />
+                                <Button x:Name="something" Content="-" Width="20" Height="20" Click="something_Click"/>
+                            </StackPanel>
+                        </DataTemplate>
+                    </ListBox.ItemTemplate>
+                </ListBox>
+                <Button x:Name="btnModBack" Content="Back" HorizontalAlignment="Left" Height="39" Margin="10,588,0,0" VerticalAlignment="Top" Width="39" Click="btnModBack_Click"/>
+                <Button x:Name="btnModAdd" Content="Choose  Side" HorizontalAlignment="Left" Height="39" Margin="365,588,0,0" VerticalAlignment="Top" Width="96" Click="btnModAdd_Click"/>
+                <TabControl x:Name="ItemImage" HorizontalAlignment="Left" Height="149" Margin="281,57,0,0" VerticalAlignment="Top" Width="166" TabStripPlacement="Bottom">
                     <TabItem Header="Image1">
-                        <Grid Background="#FFE5E5E5"/>
+                        <Grid Background="#FFE5E5E5">
+                            <Image x:Name="image1" Source="{Binding Image}"/>
+                        </Grid>
                     </TabItem>
                     <TabItem Header="Image2">
-                        <Grid Background="#FFE5E5E5" />
+                        <Grid Background="#FFE5E5E5">
+                            <Image x:Name="image2" Source="{Binding Image}"/>
+                        </Grid>
                     </TabItem>
                 </TabControl>
-                <TextBlock x:Name="txtFoodName" HorizontalAlignment="Left" TextWrapping="Wrap" Text="{Binding foodName}" VerticalAlignment="Top" Height="47" Width="100" FontSize="36"/>
-                <TextBlock x:Name="txtAllergies" Text="{Binding allergy}" HorizontalAlignment="Left" Height="63" Margin="252,397,0,0" VerticalAlignment="Top" Width="154"/>
-                <Button x:Name="button" Content="ADD" Click="button_Click" HorizontalAlignment="Left" Height="27" Margin="198,25,0,0" VerticalAlignment="Top" Width="33"/>
+                <TextBlock x:Name="txtFoodName" HorizontalAlignment="Left" TextWrapping="Wrap" Text="{Binding foodName}" VerticalAlignment="Top" Height="47" Width="172" FontSize="36"/>
+                <TextBlock x:Name="txtAllergies" Text="{Binding allergy}" HorizontalAlignment="Left" Height="85" Margin="281,444,0,0" VerticalAlignment="Top" Width="166"/>
+                <Button x:Name="button" Content="Add" Click="button_Click_1" HorizontalAlignment="Left" Height="27" Margin="197,502,0,0" VerticalAlignment="Top" Width="55" RenderTransformOrigin="0.909,7.815"/>
             </Grid>
         </StackPanel>
     </StackPanel>

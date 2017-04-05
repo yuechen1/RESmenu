@@ -27,6 +27,8 @@ namespace Drink_Menu
         public static List<FoodItem> food = new List<FoodItem>();
         public static List<DrinkItem> orderedDrinks = new List<DrinkItem>();
         public static List<FoodItem> orderedFood = new List<FoodItem>();
+        public static List<ingredient> fulllist = new List<ingredient>();
+        public static List<Sides> sides = new List<Sides>();
 
         public MainWindow()
         {
@@ -45,7 +47,34 @@ namespace Drink_Menu
             drinks.Add(new DrinkItem(null, "Almost Out of Ideas", "30.00", "50.00", "WHAT DO PEOPLE THINK ABOUT WHEN DRINKING?"));
             drinks.Add(new DrinkItem(null, "Out of Ideas", "60.00", "120.00", "THIS IS THE LAST ONE"));
 
+            //add food items
+            fulllist.Add(new ingredient("Salt"));                   //0
+            fulllist.Add(new ingredient("Pepper"));                 //1
+            fulllist.Add(new ingredient("Lettuce"));                //2
+            fulllist.Add(new ingredient("Tomato Sause"));           //3
+            fulllist.Add(new ingredient("BBQ Sause"));              //4
+            fulllist.Add(new ingredient("Mushrooms", "1.50"));      //5
+            fulllist.Add(new ingredient("Egg", "1.00"));            //6
 
+            List<ingredient> stake = new List<ingredient>();
+            stake.Add(new ingredient("Steak"));
+            stake.Add(fulllist[0]);
+            stake.Add(fulllist[1]);
+            stake.Add(fulllist[4]);
+            List<string> temp = new List<string>();
+            temp.Add("Non-vegetarian");
+            food.Add(new FoodItem(null, null, stake, "Cooked medium rare, a staple of the Dancing Shamrock.", "Steak", temp, "25.00"));
+            stake = new List<ingredient>();
+            stake.Add(new ingredient("Beef Patty"));
+            stake.Add(fulllist[0]);
+            stake.Add(fulllist[1]);
+            stake.Add(fulllist[2]);
+            stake.Add(fulllist[3]);
+            food.Add(new FoodItem(null, null, stake, "Shitty Burger", "Burger", temp, "15.00"));
+
+
+            sides.Add(new Sides(null, "Fries"));
+            sides.Add(new Sides(null, "Salads"));
 
         }
 
@@ -129,13 +158,31 @@ namespace Drink_Menu
                 { 
                     Double tprice = Double.Parse(this.price) - Double.Parse(x.price);
                     this.price = tprice.ToString();
-                    this.add.Remove(x);
+                    foreach(ingredient i in this.add)
+                    {
+                        if (i.Equals(x))
+                        {
+                            this.add.Remove(i);
+                        }
+                    }
                 }
             }
 
             public FoodItem copy()
             {
-                return (new FoodItem(this.Image1, this.Image2, this.ingredients, this.description, this.name, this.allergy, this.price));
+                List<ingredient> templist = new List<ingredient>();
+                templist = this.ingredients.ToList<ingredient>();
+                return (new FoodItem(this.Image1, this.Image2, templist, this.description, this.name, this.allergy, this.price));
+            }
+
+            public List<string> ingrendientlist()
+            {
+                List<string> templist = new List<string>();
+                foreach(ingredient i in this.ingredients)
+                {
+                    templist.Add(i.name);
+                }
+                return templist;
             }
 
         }
@@ -148,12 +195,20 @@ namespace Drink_Menu
                 this.price = b;
             }
 
+            public ingredient(string a)
+            {
+                this.name = a;
+                this.price = "0.00";
+                this.check = false;
+            }
+
             public string name { set; get; }
             public string price { set; get; }
+            public bool check { set; get; }
 
             public bool Equals(ingredient other)
             {
-                if(other.name.Equals(other.name, StringComparison.Ordinal))
+                if(this.name.Equals(other.name))
                 {
                     return true;
                 }
@@ -162,7 +217,23 @@ namespace Drink_Menu
                     return false;
                 }
             }
+            
         }
+
+        public class Sides
+        {
+            public Sides(ImageSource a, string b)
+            {
+                this.image = a;
+                this.name = b;
+                this.price = null;
+            }
+
+            public ImageSource image { set; get; }
+            public string name { set; get; }
+            public string price { set; get; }
+        }
+        
 
         private void btnCall_Click(object sender, RoutedEventArgs e)
         {
