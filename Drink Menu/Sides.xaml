@@ -10,7 +10,7 @@
         <StackPanel HorizontalAlignment="Left" Height="50" VerticalAlignment="Top" Width="470" Orientation="Horizontal">
             <TextBlock x:Name="txtRestName" HorizontalAlignment="Left" Height="50" TextWrapping="Wrap" Text="Dancing Shamrock" Width="319" FontFamily="Segoe UI Black" FontSize="34" Foreground="#FF630C0C" Panel.ZIndex="-2" Margin="0" Background="Black"/>
             <Button x:Name="btnCall" Content="Call" Height="50" VerticalAlignment="Top" Width="60"/>
-            <Button x:Name="btnBill" Content="Bill" Height="50" VerticalAlignment="Top" Width="93"/>
+            <Button x:Name="btnBill" Content="Bill" Height="50" VerticalAlignment="Top" Width="93" IsEnabled="False"/>
         </StackPanel>
         <StackPanel HorizontalAlignment="Left" Height="637" Width="470" Orientation="Horizontal">
             <Grid Margin="0,0,0,-83" VerticalAlignment="Top" Height="637" Width="470">

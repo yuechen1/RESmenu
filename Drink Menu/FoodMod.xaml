@@ -10,7 +10,7 @@
         <StackPanel HorizontalAlignment="Left" Height="50" VerticalAlignment="Top" Width="470" Orientation="Horizontal">
             <TextBlock x:Name="txtRestName" HorizontalAlignment="Left" Height="50" TextWrapping="Wrap" Text="Dancing Shamrock" Width="319" FontFamily="Segoe UI Black" FontSize="34" Foreground="#FF630C0C" Panel.ZIndex="-2" Margin="0" Background="Black"/>
             <Button x:Name="btnCall" Content="Call" Height="50" VerticalAlignment="Top" Width="60"/>
-            <Button x:Name="btnBill" Content="Bill" Height="50" VerticalAlignment="Top" Width="93"/>
+            <Button x:Name="btnBill" Content="Bill" Height="50" VerticalAlignment="Top" Width="93" IsEnabled="False"/>
         </StackPanel>
         <StackPanel x:Name="Addmenu" Height="0" Width="235" Panel.ZIndex="2" Margin="235,16,0,0">
             <Grid Background="White" Height="637" Width="235">
@@ -26,7 +26,7 @@
                         </DataTemplate>
                     </ListBox.ItemTemplate>
                 </ListBox>
-                <Button x:Name="btnFoodAddBack" Content="Done" HorizontalAlignment="Left" Height="29" Margin="10,598,0,0" VerticalAlignment="Top" Width="215" Click="btnFoodAddBack_Click"/>
+                <Button x:Name="btnFoodAddBack" Content="Done" HorizontalAlignment="Left" Height="29" Margin="10,598,0,0" VerticalAlignment="Top" Width="210" Click="btnFoodAddBack_Click"/>
             </Grid>
         </StackPanel>
         <StackPanel VerticalAlignment="Top" HorizontalAlignment="Left" Height="636" Width="470" Orientation="Horizontal" Panel.ZIndex="1" Margin="0,50,0,0">

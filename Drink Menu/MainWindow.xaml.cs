@@ -250,6 +250,8 @@ namespace Drink_Menu
         private void btnBill_Click(object sender, RoutedEventArgs e)
         {
             Window5 tempwindow = new Window5();
+            tempwindow.Top = this.Top;
+            tempwindow.Left = this.Left;
             tempwindow.Show();
         }
 

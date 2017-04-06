@@ -75,6 +75,12 @@ namespace Drink_Menu
             MainWindow.Drinkdisplay drink = k.DataContext as MainWindow.Drinkdisplay;
 
             Window2 tempWindow = new Drink_Menu.Window2(drink.Name);
+
+            var wnd = Window.GetWindow(this);
+            tempWindow.Top = wnd.Top + wnd.Top/ 2;
+            tempWindow.Left = wnd.Left + wnd.Top/ 2;
+
+
             tempWindow.Show();
         }
 
@@ -84,6 +90,11 @@ namespace Drink_Menu
             MainWindow.Drinkdisplay drink = k.DataContext as MainWindow.Drinkdisplay;
 
             Window2 tempWindow = new Drink_Menu.Window2(drink.Name_1);
+
+            var wnd = Window.GetWindow(this);
+            tempWindow.Top = wnd.Top + wnd.Top/2;
+            tempWindow.Left = wnd.Left + wnd.Left/2;
+
             tempWindow.Show();
         }
     }

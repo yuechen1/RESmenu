@@ -79,7 +79,9 @@ namespace Drink_Menu
 		{
             MainWindow.orderedFood.Add(this.k);
 			Window4 sidesWindow = new Window4();
-			sidesWindow.Show();
+            sidesWindow.Top = this.Top;
+            sidesWindow.Left = this.Left;
+            sidesWindow.Show();
 		}
 
 		private void btnModBack_Click(object sender, RoutedEventArgs e)
@@ -90,6 +92,8 @@ namespace Drink_Menu
         private void button_Click(object sender, RoutedEventArgs e)
         {
             Window3 sideWindow = new Drink_Menu.Window3();
+            sideWindow.Top = this.Top;
+            sideWindow.Left = this.Left;
             sideWindow.Show();
         }
 
@@ -104,6 +108,7 @@ namespace Drink_Menu
                 {
                     this.currentrecipe.Remove(i);
                     this.k.removeingredient(i);
+                    this.addrecipe.Add(i);
                     break;
                 }
             }

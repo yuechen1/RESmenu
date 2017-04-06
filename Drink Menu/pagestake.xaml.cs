@@ -97,6 +97,11 @@ namespace Drink_Menu
             Fooddisplay food = k.DataContext as Fooddisplay;
 
             Window1 tempWindow = new Drink_Menu.Window1(food.Name);
+
+            var wnd = Window.GetWindow(this);
+            tempWindow.Top = wnd.Top;
+            tempWindow.Left = wnd.Left;
+
             tempWindow.Show();
         }
 
@@ -106,6 +111,11 @@ namespace Drink_Menu
             Fooddisplay food = k.DataContext as Fooddisplay;
 
             Window1 tempWindow = new Drink_Menu.Window1(food.Name_1);
+
+            var wnd = Window.GetWindow(this);
+            tempWindow.Top = wnd.Top;
+            tempWindow.Left = wnd.Left;
+
             tempWindow.Show();
         }
     }

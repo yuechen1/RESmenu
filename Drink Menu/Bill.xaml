@@ -26,8 +26,8 @@
                     </ListBox.ItemTemplate>
                 </ListBox>
                 <Button x:Name="btnBillBack" Content="Back" HorizontalAlignment="Left" Height="42" Margin="10,585,0,0" VerticalAlignment="Top" Width="57" Click="btnBillBack_Click"/>
-                <Button x:Name="btnCash" Content="Pay with Cash" HorizontalAlignment="Left" Height="42" Margin="380,590,0,0" VerticalAlignment="Top" Width="82" Click="btnCash_Click"/>
-                <Button x:Name="btnCard" Content="Pay with Debit/Credit" HorizontalAlignment="Left" Height="42" Margin="243,590,0,0" VerticalAlignment="Top" Width="137" Click="btnCard_Click"/>
+                <Button x:Name="btnCash" Content="Pay with Cash" HorizontalAlignment="Left" Height="42" Margin="380,585,0,0" VerticalAlignment="Top" Width="82" Click="btnCash_Click"/>
+                <Button x:Name="btnCard" Content="Pay with Debit/Credit" HorizontalAlignment="Left" Height="42" Margin="243,585,0,0" VerticalAlignment="Top" Width="137" Click="btnCard_Click"/>
                 <StackPanel HorizontalAlignment="Left" Height="120" Margin="298,445,0,0" VerticalAlignment="Top" Width="120">
                     <StackPanel HorizontalAlignment="Right" Height="40" Width="120" VerticalAlignment="Top" Orientation="Horizontal">
                         <TextBlock Text="  Subtotal: " Height="40"/>
