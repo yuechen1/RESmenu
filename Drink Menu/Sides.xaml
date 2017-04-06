@@ -21,9 +21,9 @@
                             <RadioButton GroupName="OH NO" x:Name="thisischecked" VerticalAlignment="Center" Click="Button_Click">
                                 <StackPanel HorizontalAlignment="Left" Height="50" Width="440" Orientation="Horizontal">
                                     <Image Source="{Binding image}" Height="50" Width="50"/>
-                                    <StackPanel HorizontalAlignment="Left" Height="50" Width="275" Orientation="Horizontal">
-                                        <TextBlock Text="{Binding name}" FontSize="30" FontWeight="Bold" Width="270" Height="50"/>
-                                        <TextBlock Text="{Binding price}" Height="50" Width="50" FontSize="30"/>
+                                    <StackPanel HorizontalAlignment="Left" Height="50" Width="335" Orientation="Horizontal">
+                                        <TextBlock Text="{Binding name}" FontSize="30" FontWeight="Bold" Width="230" Height="50" Margin="10,0,0,0"/>
+                                        <TextBlock Text="{Binding price}" Height="50" Width="100" FontSize="30"/>
                                     </StackPanel>
                                 </StackPanel>
                             </RadioButton>

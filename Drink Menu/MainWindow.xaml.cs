@@ -35,18 +35,18 @@ namespace Drink_Menu
         {
             InitializeComponent();
             //add drink items
-            drinks.Add(new DrinkItem(null, "Water", "0.00", "0.00", "The best tap water you can find" ));
-            drinks.Add(new DrinkItem(null, "Light Beer", "6.50", "8.00", "Genaric light beer" ));
-            drinks.Add(new DrinkItem(null, "Beer", "6.50", "8.00", "Some Beer" ));
-            drinks.Add(new DrinkItem(null, "Bear", "8.00", "12.00", "Real Bear? I don't know"));
-            drinks.Add(new DrinkItem(null, "Red Wine", "12.00", "35.00", "WHY ARE YOU READING THIS?"));
-            drinks.Add(new DrinkItem(null, "White Wine", "12.00", "35.00", "DO YOU LOOK AT EVERY SINGLE ONE?"));
-            drinks.Add(new DrinkItem(null, "Drink 1", "7.00", "9.00", "WHY AM I EVEN WRITING THESE"));
-            drinks.Add(new DrinkItem(null, "Moonshine", "6.50", "8.50", "NO HOPE IN HERE"));
-            drinks.Add(new DrinkItem(null, "Banana Flush", "5.50", "10.00", "I DON\'T EVEN KNOW WHAT TO WRITE"));
-            drinks.Add(new DrinkItem(null, "Drink 2", "3.00", "5.00", "ARE THERE EVEN MORE THAN 10 DRINKS?"));
-            drinks.Add(new DrinkItem(null, "Almost Out of Ideas", "30.00", "50.00", "WHAT DO PEOPLE THINK ABOUT WHEN DRINKING?"));
-            drinks.Add(new DrinkItem(null, "Out of Ideas", "60.00", "120.00", "THIS IS THE LAST ONE"));
+            drinks.Add(new DrinkItem(new BitmapImage(new Uri("Resources/images/drink1.jpg", UriKind.Relative)), "Water", "0.00", "0.00", "The best tap water you can find" ));
+            drinks.Add(new DrinkItem(new BitmapImage(new Uri("Resources/images/drink2.jpg", UriKind.Relative)), "Light Beer", "6.50", "8.00", "Genaric light beer" ));
+            drinks.Add(new DrinkItem(new BitmapImage(new Uri("Resources/images/drink3.jpg", UriKind.Relative)), "Beer", "6.50", "8.00", "Some Beer" ));
+            drinks.Add(new DrinkItem(new BitmapImage(new Uri("Resources/images/bear.jpg", UriKind.Relative)), "Bear", "8.00", "12.00", "Real Bear? I don't know"));
+            drinks.Add(new DrinkItem(new BitmapImage(new Uri("Resources/images/drink4.jpg", UriKind.Relative)), "Red Wine", "12.00", "35.00", "WHY ARE YOU READING THIS?"));
+            drinks.Add(new DrinkItem(new BitmapImage(new Uri("Resources/images/drink5.jpg", UriKind.Relative)), "White Wine", "12.00", "35.00", "DO YOU LOOK AT EVERY SINGLE ONE?"));
+            drinks.Add(new DrinkItem(new BitmapImage(new Uri("Resources/images/drink6.jpg", UriKind.Relative)), "Drink 1", "7.00", "9.00", "WHY AM I EVEN WRITING THESE"));
+            drinks.Add(new DrinkItem(new BitmapImage(new Uri("Resources/images/drink7.jpg", UriKind.Relative)), "Moonshine", "6.50", "8.50", "NO HOPE IN HERE"));
+            drinks.Add(new DrinkItem(new BitmapImage(new Uri("Resources/images/drink8.jpg", UriKind.Relative)), "Banana Flush", "5.50", "10.00", "I DON\'T EVEN KNOW WHAT TO WRITE"));
+            drinks.Add(new DrinkItem(new BitmapImage(new Uri("Resources/images/drink9.jpg", UriKind.Relative)), "Drink 2", "3.00", "5.00", "ARE THERE EVEN MORE THAN 10 DRINKS?"));
+            drinks.Add(new DrinkItem(new BitmapImage(new Uri("Resources/images/drink10.jpg", UriKind.Relative)), "Almost Out of Ideas", "30.00", "50.00", "WHAT DO PEOPLE THINK ABOUT WHEN DRINKING?"));
+            drinks.Add(new DrinkItem(new BitmapImage(new Uri("Resources/images/drink11.jpg", UriKind.Relative)), "Out of Ideas", "60.00", "120.00", "THIS IS THE LAST ONE"));
 
             //add food items
             fulllist.Add(new ingredient("Salt"));                   //0
@@ -64,18 +64,21 @@ namespace Drink_Menu
             stake.Add(fulllist[4]);
             List<string> temp = new List<string>();
             temp.Add("Non-vegetarian");
-            food.Add(new FoodItem(null, null, stake, "Cooked medium rare, a staple of the Dancing Shamrock.", "Steak", temp, "25.00"));
+            food.Add(new FoodItem(new BitmapImage(new Uri("Resources/images/steak1.jpg", UriKind.Relative)),
+                                  new BitmapImage(new Uri("Resources/images/steak2.jpg", UriKind.Relative)), 
+                                  stake, "Cooked medium rare, a staple of the Dancing Shamrock.", "Steak", temp, "25.00"));
             stake = new List<ingredient>();
             stake.Add(new ingredient("Beef Patty"));
             stake.Add(fulllist[0]);
             stake.Add(fulllist[1]);
             stake.Add(fulllist[2]);
             stake.Add(fulllist[3]);
-            food.Add(new FoodItem(null, null, stake, "Shitty Burger", "Burger", temp, "15.00"));
+            food.Add(new FoodItem(new BitmapImage(new Uri("Resources/images/burger.png", UriKind.Relative)),
+                                  new BitmapImage(new Uri("Resources/images/burger1.jpg", UriKind.Relative)), stake, "Shitty Burger", "Burger", temp, "15.00"));
 
 
-            sides.Add(new Sides(null, "Fries"));
-            sides.Add(new Sides(null, "Salads"));
+            sides.Add(new Sides(new BitmapImage(new Uri("Resources/images/fries.png", UriKind.Relative)), "Fries"));
+            sides.Add(new Sides(new BitmapImage(new Uri("Resources/images/salad.jpg", UriKind.Relative)), "Salads"));
 
         }
 
@@ -233,7 +236,7 @@ namespace Drink_Menu
             {
                 this.image = a;
                 this.name = b;
-                this.price = null;
+                this.price = "0.00";
             }
 
             public ImageSource image { set; get; }

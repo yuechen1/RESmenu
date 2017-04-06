@@ -162,6 +162,28 @@
   <ItemGroup>
     <Resource Include="Resources\images\stakeimage.png" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\images\bear.jpg" />
+    <Resource Include="Resources\images\burger.png" />
+    <Resource Include="Resources\images\burger1.jpg" />
+    <Resource Include="Resources\images\drink1.jpg" />
+    <Resource Include="Resources\images\drink10.jpg" />
+    <Resource Include="Resources\images\drink11.jpg" />
+    <Resource Include="Resources\images\drink2.jpg" />
+    <Resource Include="Resources\images\drink3.jpg" />
+    <Resource Include="Resources\images\drink4.jpg" />
+    <Resource Include="Resources\images\drink5.jpg" />
+    <Resource Include="Resources\images\drink6.jpg" />
+    <Resource Include="Resources\images\drink7.jpg" />
+    <Resource Include="Resources\images\drink8.jpg" />
+    <Resource Include="Resources\images\drink9.jpg" />
+    <Resource Include="Resources\images\steak1.jpg" />
+    <Resource Include="Resources\images\steak2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\images\fries.png" />
+    <Resource Include="Resources\images\salad.jpg" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
