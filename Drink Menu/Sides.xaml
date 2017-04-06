@@ -13,58 +13,25 @@
             <Button x:Name="btnBill" Content="Bill" Height="50" VerticalAlignment="Top" Width="93"/>
         </StackPanel>
         <StackPanel HorizontalAlignment="Left" Height="637" Width="470" Orientation="Horizontal">
-            <TabControl x:Name="tabControl" Height="637" VerticalAlignment="Top" Width="30" TabStripPlacement="Left">
-                <TabControl.Resources>
-                    <Style TargetType="{x:Type TabItem}">
-                        <Setter Property="HeaderTemplate">
-                            <Setter.Value>
-                                <DataTemplate>
-                                    <ContentPresenter Content="{TemplateBinding Content}">
-                                        <ContentPresenter.LayoutTransform>
-                                            <RotateTransform Angle="270" />
-                                        </ContentPresenter.LayoutTransform>
-                                    </ContentPresenter>
-                                </DataTemplate>
-                            </Setter.Value>
-                        </Setter>
-                        <Setter Property="Padding" Value="3" />
-                    </Style>
-                </TabControl.Resources>
-                <TabItem Header="Drinks" Margin="0,0,0,0" Height="175" VerticalAlignment="Top"/>
-                <TabItem Header="Food" Margin="0,0,0,0" Height="175" VerticalAlignment="Top"/>
-                <TabItem Header="Special" Margin="0,0,0,0" Height="175" VerticalAlignment="Top"/>
-            </TabControl>
-            <Grid Height="720" Margin="0,0,0,-83" VerticalAlignment="Top" Width="440">
-                <TextBlock x:Name="txtSide" HorizontalAlignment="Left" Height="46" TextWrapping="Wrap" Text="Sides" VerticalAlignment="Top" Width="440" FontSize="36"/>
-                <ListBox x:Name="lbxSideDisplay" HorizontalAlignment="Left" Height="472" Margin="0,51,0,0" VerticalAlignment="Top" Width="440">
+            <Grid Margin="0,0,0,-83" VerticalAlignment="Top" Height="637" Width="470">
+                <TextBlock x:Name="txtSide" HorizontalAlignment="Left" Height="46" TextWrapping="Wrap" Text="Sides" VerticalAlignment="Top" Width="450" FontSize="36" Margin="10,10,0,0"/>
+                <ListBox x:Name="lbxSideDisplay" HorizontalAlignment="Left" Height="496" Margin="10,73,0,0" VerticalAlignment="Top" Width="450" ScrollViewer.HorizontalScrollBarVisibility="Disabled">
                     <ListBox.ItemTemplate>
                         <DataTemplate>
-                            <StackPanel HorizontalAlignment="Left" Height="100" Width="440" Orientation="Horizontal">
-                                <StackPanel HorizontalAlignment="Left" Height="100" Width="220" Orientation="Horizontal">
-                                    <Image Source="{Binding Image}" Height="100" Width="50"/>
-                                    <StackPanel HorizontalAlignment="Left" Height="100" Width="170" Orientation="Vertical">
-                                        <TextBlock Text="{Binding Name}" FontWeight="Bold"/>
-                                        <StackPanel HorizontalAlignment="Left" Height="100" Width="170" Orientation="Horizontal">
-                                            <TextBlock Text="{Binding price}"/>
-                                        </StackPanel>
+                            <RadioButton GroupName="OH NO" x:Name="thisischecked" VerticalAlignment="Center" Click="Button_Click">
+                                <StackPanel HorizontalAlignment="Left" Height="50" Width="440" Orientation="Horizontal">
+                                    <Image Source="{Binding image}" Height="50" Width="50"/>
+                                    <StackPanel HorizontalAlignment="Left" Height="50" Width="275" Orientation="Horizontal">
+                                        <TextBlock Text="{Binding name}" FontSize="30" FontWeight="Bold" Width="270" Height="50"/>
+                                        <TextBlock Text="{Binding price}" Height="50" Width="50" FontSize="30"/>
                                     </StackPanel>
                                 </StackPanel>
-                                <StackPanel HorizontalAlignment="Left" Height="100" Width="220" Orientation="Horizontal">
-                                    <Image Source="{Binding Image_1}" Height="100" Width="50"/>
-                                    <StackPanel HorizontalAlignment="Left" Height="100" Width="170" Orientation="Vertical">
-                                        <TextBlock Text="{Binding Name_1}" FontWeight="Bold"/>
-                                        <StackPanel HorizontalAlignment="Left" Height="100" Width="170" Orientation="Horizontal">
-                                            <TextBlock Text="{Binding price_1}"/>
-                                        </StackPanel>
-                                    </StackPanel>
-                                </StackPanel>
-                            </StackPanel>
+                            </RadioButton>
                         </DataTemplate>
                     </ListBox.ItemTemplate>
                 </ListBox>
-                <Button x:Name="btnSideBack" Content="Back" HorizontalAlignment="Left" Height="37" Margin="32,539,0,0" VerticalAlignment="Top" Width="58" Click="btnSideBack_Click"/>
-                <Button x:Name="btnSideAdd" Content="Add" HorizontalAlignment="Left" Height="37" Margin="346,539,0,0" VerticalAlignment="Top" Width="58"/>
-
+                <Button x:Name="btnSideBack" Content="Back" HorizontalAlignment="Left" Height="37" Margin="10,590,0,0" VerticalAlignment="Top" Width="58" Click="btnSideBack_Click"/>
+                <Button x:Name="btnSideAdd" Content="Finish Adding" HorizontalAlignment="Left" Height="37" Margin="366,590,0,0" VerticalAlignment="Top" Width="94" Click="btnSideAdd_Click"/>
             </Grid>
         </StackPanel>
     </StackPanel>

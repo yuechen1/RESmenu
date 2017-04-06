@@ -27,6 +27,7 @@ namespace Drink_Menu
         public static List<FoodItem> food = new List<FoodItem>();
         public static List<DrinkItem> orderedDrinks = new List<DrinkItem>();
         public static List<FoodItem> orderedFood = new List<FoodItem>();
+        public static List<Sides> orderedSides = new List<Sides>();
         public static List<ingredient> fulllist = new List<ingredient>();
         public static List<Sides> sides = new List<Sides>();
 
@@ -150,11 +151,18 @@ namespace Drink_Menu
 
             public void removeingredient(ingredient x)
             {
-                if (this.ingredients.Contains(x))
+                bool found = false;
+                foreach (ingredient i in this.ingredients)
                 {
-                    this.ingredients.Remove(x);
+                    if (i.Equals(x))
+                    {
+                        this.add.Remove(i);
+                        found = true;
+                        break;
+                    }
                 }
-                else
+
+                if (!found)
                 { 
                     Double tprice = Double.Parse(this.price) - Double.Parse(x.price);
                     this.price = tprice.ToString();
@@ -163,6 +171,7 @@ namespace Drink_Menu
                         if (i.Equals(x))
                         {
                             this.add.Remove(i);
+                            break;
                         }
                     }
                 }
@@ -199,12 +208,10 @@ namespace Drink_Menu
             {
                 this.name = a;
                 this.price = "0.00";
-                this.check = false;
             }
 
             public string name { set; get; }
             public string price { set; get; }
-            public bool check { set; get; }
 
             public bool Equals(ingredient other)
             {

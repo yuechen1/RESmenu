@@ -19,31 +19,40 @@ namespace Drink_Menu
     /// </summary>
     public partial class Window4 : Window
     {
+        MainWindow.Sides currentselected = null;
         public Window4()
         {
             InitializeComponent();
-            List<Sides> items = new List<Sides>();
-            items.Add(new Sides { Image = null, price = null, Name = "potato1", Image_1 = null, Name_1 = "sasasa", price_1 = "$1.50" });
-            items.Add(new Sides { Image = null, price = null, Name = "potato2", Image_1 = null, Name_1 = "cupa", price_1 = "$1.50" });
-            items.Add(new Sides { Image = null, price = null, Name = "potato3", Image_1 = null, Name_1 = "sasasa", price_1 = "$1.50" });
-            items.Add(new Sides { Image = null, price = "$0.50", Name = "potato4", Image_1 = null, Name_1 = "sasasa", price_1 = "$1.50" });
-            items.Add(new Sides { Image = null, price = null, Name = "potato5", Image_1 = null, Name_1 = "sasasa", price_1 = "$1.50" });
-            lbxSideDisplay.ItemsSource = items;
+
+            lbxSideDisplay.ItemsSource = MainWindow.sides;
         }
 
 		private void btnSideBack_Click(object sender, RoutedEventArgs e)
 		{
+            int j = MainWindow.orderedFood.Count();
+            MainWindow.orderedFood.Remove(MainWindow.orderedFood[j - 1]);
 			this.Close();
 		}
-	}
 
-	public class Sides
-    {
-        public string Image { get; set; }
-        public string price { get; set; }
-        public string Name { get; set; }
-        public string Image_1 { get; set; }
-        public string price_1 { get; set; }
-        public string Name_1 { get; set; }
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            RadioButton k = (RadioButton)sender;
+            MainWindow.Sides food = k.DataContext as MainWindow.Sides;
+            this.currentselected = food;
+        }
+
+        private void btnSideAdd_Click(object sender, RoutedEventArgs e)
+        {
+            if(currentselected != null)
+            {
+                foreach (Window1 window in Application.Current.Windows.OfType<Window1>())
+                {
+                    window.Close();
+                    break;
+                }
+                MainWindow.orderedSides.Add(this.currentselected);
+                this.Close();
+            }
+        }
     }
 }

@@ -40,9 +40,21 @@ namespace Drink_Menu
             }
 
             //get a copy of the full ingredent list
+            bool found = false;
             foreach(MainWindow.ingredient i in MainWindow.fulllist)
             {
-                this.addrecipe.Add(i);
+                found = false;
+                foreach(MainWindow.ingredient j in k.ingredients)
+                {
+                    if (j.Equals(i))
+                    {
+                        found = true;
+                    }
+                }
+                if (!found)
+                {
+                    this.addrecipe.Add(i);
+                }
             }
 
             IngredientList.ItemsSource = this.addrecipe;
@@ -60,11 +72,12 @@ namespace Drink_Menu
 			string foodDesc = "Cooked medium rare, a staple of the Dancing Shamrock.";
 			txtFoodInfo.Text = foodDesc;
 			txtFoodName.Text = k.name;
-			txtAllergies.Text = String.Join(", ", k.ingrendientlist());
+			txtAllergies.Text = String.Join(", ", k.allergy.ToArray());
         }
 
 		private void btnModAdd_Click(object sender, RoutedEventArgs e)
 		{
+            MainWindow.orderedFood.Add(this.k);
 			Window4 sidesWindow = new Window4();
 			sidesWindow.Show();
 		}
@@ -96,31 +109,33 @@ namespace Drink_Menu
             }
         }
 
-        private void btnFoodAddAccept_Click(object sender, RoutedEventArgs e)
-        {
-            Addmenu.Height = 0;
-        }
-
         private void btnFoodAddBack_Click(object sender, RoutedEventArgs e)
         {
-
-            foreach (MainWindow.ingredient i in this.addrecipe)
-            {
-
-                if(i.check)
-                {
-                    i.check = false;
-                    this.addrecipe.Remove(i);
-                    this.currentrecipe.Add(i);
-                    this.k.addingredient(i);
-                }
-            }
             Addmenu.Height = 0;
+            button.IsEnabled = true;
         }
 
         private void button_Click_1(object sender, RoutedEventArgs e)
         {
             Addmenu.Height = 637;
+            button.IsEnabled = false;
+        }
+
+        private void addbuttoning_Click(object sender, RoutedEventArgs e)
+        {
+            Button k = (Button)sender;
+            MainWindow.ingredient food = k.DataContext as MainWindow.ingredient;
+
+            foreach (MainWindow.ingredient i in this.addrecipe)
+            {
+                if (i.Equals(food))
+                {
+                    this.currentrecipe.Add(i);
+                    this.k.addingredient(i);
+                    this.addrecipe.Remove(i);
+                    break;
+                }
+            }
         }
     }
 
