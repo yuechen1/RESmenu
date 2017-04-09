@@ -50,7 +50,7 @@ namespace Drink_Menu
                 tempuse = MainWindow.orderedFood[numfood].add;
                 foreach (MainWindow.ingredient i in tempuse)
                 {
-                    this.items.Add(new ShowFood("\tNo " + i.name, i.price));
+                    this.items.Add(new ShowFood("\tAdd " + i.name, i.price));
                 }
                 this.items.Add(new ShowFood("\t" + MainWindow.orderedSides[numfood].name, MainWindow.orderedSides[numfood].price));
             }
