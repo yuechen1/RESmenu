@@ -35,25 +35,25 @@ namespace Drink_Menu
         {
             InitializeComponent();
             //add drink items
-            drinks.Add(new DrinkItem(new BitmapImage(new Uri("Resources/images/drink1.jpg", UriKind.Relative)), "Water", "0.00", "0.00", "The best tap water you can find" ));
-            drinks.Add(new DrinkItem(new BitmapImage(new Uri("Resources/images/drink2.jpg", UriKind.Relative)), "Light Beer", "6.50", "8.00", "Genaric light beer" ));
-            drinks.Add(new DrinkItem(new BitmapImage(new Uri("Resources/images/drink3.jpg", UriKind.Relative)), "Beer", "6.50", "8.00", "Some Beer" ));
-            drinks.Add(new DrinkItem(new BitmapImage(new Uri("Resources/images/bear.jpg", UriKind.Relative)), "Bear", "8.00", "12.00", "Real Bear? I don't know"));
-            drinks.Add(new DrinkItem(new BitmapImage(new Uri("Resources/images/drink4.jpg", UriKind.Relative)), "Red Wine", "12.00", "35.00", "WHY ARE YOU READING THIS?"));
-            drinks.Add(new DrinkItem(new BitmapImage(new Uri("Resources/images/drink5.jpg", UriKind.Relative)), "White Wine", "12.00", "35.00", "DO YOU LOOK AT EVERY SINGLE ONE?"));
-            drinks.Add(new DrinkItem(new BitmapImage(new Uri("Resources/images/drink6.jpg", UriKind.Relative)), "Drink 1", "7.00", "9.00", "WHY AM I EVEN WRITING THESE"));
-            drinks.Add(new DrinkItem(new BitmapImage(new Uri("Resources/images/drink7.jpg", UriKind.Relative)), "Moonshine", "6.50", "8.50", "NO HOPE IN HERE"));
-            drinks.Add(new DrinkItem(new BitmapImage(new Uri("Resources/images/drink8.jpg", UriKind.Relative)), "Banana Flush", "5.50", "10.00", "I DON\'T EVEN KNOW WHAT TO WRITE"));
-            drinks.Add(new DrinkItem(new BitmapImage(new Uri("Resources/images/drink9.jpg", UriKind.Relative)), "Drink 2", "3.00", "5.00", "ARE THERE EVEN MORE THAN 10 DRINKS?"));
-            drinks.Add(new DrinkItem(new BitmapImage(new Uri("Resources/images/drink10.jpg", UriKind.Relative)), "Almost Out of Ideas", "30.00", "50.00", "WHAT DO PEOPLE THINK ABOUT WHEN DRINKING?"));
-            drinks.Add(new DrinkItem(new BitmapImage(new Uri("Resources/images/drink11.jpg", UriKind.Relative)), "Out of Ideas", "60.00", "120.00", "THIS IS THE LAST ONE"));
+            drinks.Add(new DrinkItem(new BitmapImage(new Uri("Resources/images/drink1.jpg", UriKind.Relative)), "Water", "0.00", "0.00", "The best tap water you can find." ));
+            drinks.Add(new DrinkItem(new BitmapImage(new Uri("Resources/images/drink2.jpg", UriKind.Relative)), "Light Beer", "6.50", "8.00", "Generic light beer." ));
+            drinks.Add(new DrinkItem(new BitmapImage(new Uri("Resources/images/drink3.jpg", UriKind.Relative)), "Beer", "6.50", "8.00", "Our beer on tap." ));
+            drinks.Add(new DrinkItem(new BitmapImage(new Uri("Resources/images/bear.jpg", UriKind.Relative)), "Bear Mix", "8.00", "12.00", "A real bear? No, just puts hair on your chest."));
+            drinks.Add(new DrinkItem(new BitmapImage(new Uri("Resources/images/drink4.jpg", UriKind.Relative)), "Red Wine", "12.00", "35.00", "A nice Merlot."));
+            drinks.Add(new DrinkItem(new BitmapImage(new Uri("Resources/images/drink5.jpg", UriKind.Relative)), "White Wine", "12.00", "35.00", "For when you want to look classy."));
+            drinks.Add(new DrinkItem(new BitmapImage(new Uri("Resources/images/drink6.jpg", UriKind.Relative)), "Red Whisky", "7.00", "9.00", "A local brewer's latest experiment. Recommended by the staff."));
+            drinks.Add(new DrinkItem(new BitmapImage(new Uri("Resources/images/drink7.jpg", UriKind.Relative)), "Moonshine", "6.50", "8.50", "Ask about our 200 proof challenge!"));
+            drinks.Add(new DrinkItem(new BitmapImage(new Uri("Resources/images/drink8.jpg", UriKind.Relative)), "Banana Flush", "5.50", "10.00", "Our bartender's signature mixed drink."));
+            drinks.Add(new DrinkItem(new BitmapImage(new Uri("Resources/images/drink9.jpg", UriKind.Relative)), "Milkshake", "3.00", "5.00", "For the young, or young at heart."));
+            drinks.Add(new DrinkItem(new BitmapImage(new Uri("Resources/images/drink10.jpg", UriKind.Relative)), "Chocolate shooter", "30.00", "50.00", "Vodka laced with pure cocoa sourced from Columbia. Chocoholics only!"));
+            drinks.Add(new DrinkItem(new BitmapImage(new Uri("Resources/images/drink11.jpg", UriKind.Relative)), "Secret Stash Surprise", "60.00", "120.00", "Our owner shares one of his latest rare acquisitions. Are you feeling adventurous?"));
 
             //add food items
             fulllist.Add(new ingredient("Salt"));                   //0
             fulllist.Add(new ingredient("Pepper"));                 //1
             fulllist.Add(new ingredient("Lettuce"));                //2
-            fulllist.Add(new ingredient("Tomato Sause"));           //3
-            fulllist.Add(new ingredient("BBQ Sause"));              //4
+            fulllist.Add(new ingredient("Tomato Sauce"));           //3
+            fulllist.Add(new ingredient("BBQ Sauce"));              //4
             fulllist.Add(new ingredient("Mushrooms", "1.50"));      //5
             fulllist.Add(new ingredient("Egg", "1.00"));            //6
 
@@ -74,11 +74,11 @@ namespace Drink_Menu
             stake.Add(fulllist[2]);
             stake.Add(fulllist[3]);
             food.Add(new FoodItem(new BitmapImage(new Uri("Resources/images/burger.png", UriKind.Relative)),
-                                  new BitmapImage(new Uri("Resources/images/burger1.jpg", UriKind.Relative)), stake, "Shitty Burger", "Burger", temp, "15.00"));
+                                  new BitmapImage(new Uri("Resources/images/burger1.jpg", UriKind.Relative)), stake, "A well-cooked patty, with our secret spice mix.", "Burger", temp, "15.00"));
 
 
             sides.Add(new Sides(new BitmapImage(new Uri("Resources/images/fries.png", UriKind.Relative)), "Fries"));
-            sides.Add(new Sides(new BitmapImage(new Uri("Resources/images/salad.jpg", UriKind.Relative)), "Salads"));
+            sides.Add(new Sides(new BitmapImage(new Uri("Resources/images/salad.jpg", UriKind.Relative)), "Salad"));
 
         }
 

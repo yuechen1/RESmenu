@@ -18,7 +18,7 @@
                 <ListBox x:Name="IngredientList" HorizontalAlignment="Left" Height="516" VerticalAlignment="Top" Width="215" Margin="10,59,0,0">
                     <ListBox.ItemTemplate>
                         <DataTemplate>
-                            <StackPanel HorizontalAlignment="Left" Height="30" Width="215" Orientation="Horizontal">
+                            <StackPanel HorizontalAlignment="Left" Height="30" Width="200" Orientation="Horizontal">
                                 <Button x:Name="addbuttoning" Content="+" Height="20" Width="20" Click="addbuttoning_Click" Margin="0,5,5,5"/>
                                 <TextBlock x:Name="checkBox" Text="{Binding name}" Height="30" Width="145" FontSize="16"/>
                                 <TextBlock x:Name="contentprice" Text="{Binding price}" Width="50" Height="30" FontSize="16"/>
