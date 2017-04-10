@@ -71,9 +71,9 @@ namespace Drink_Menu
 
             lbxPriceBox.ItemsSource = this.items;
 
-            view_subtotal.Text = tempprice.ToString();
-            view_tax.Text = temptax.ToString();
-            view_finaltotal.Text = tempfinal.ToString();
+            view_subtotal.Text = tempprice.ToString("c");
+            view_tax.Text = temptax.ToString("c");
+            view_finaltotal.Text = tempfinal.ToString("c");
         }
 
 		private void btnBillBack_Click(object sender, RoutedEventArgs e)
@@ -83,12 +83,12 @@ namespace Drink_Menu
 
         private void btnCash_Click(object sender, RoutedEventArgs e)
         {
-            MessageBox.Show("A Waiter is on the way with.");
+            MessageBox.Show("Your waiter is on the way.");
         }
 
         private void btnCard_Click(object sender, RoutedEventArgs e)
         {
-            MessageBox.Show("A Waiter is on the way with a payment machine. Please wait");
+            MessageBox.Show("Your waiter is on the way with a card reader. Please wait.");
         }
     }
 

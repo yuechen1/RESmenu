@@ -109,3 +109,32 @@ C:\Users\Yue\Documents\Visual Studio 2015\Projects\RESmenu\Drink Menu\obj\Debug\
 C:\Users\Yue\Documents\Visual Studio 2015\Projects\RESmenu\Drink Menu\obj\Debug\Drink Menu.g.resources
 C:\Users\Yue\Documents\Visual Studio 2015\Projects\RESmenu\Drink Menu\obj\Debug\Drink_Menu.Properties.Resources.resources
 C:\Users\Yue\Documents\Visual Studio 2015\Projects\RESmenu\Drink Menu\obj\Debug\Drink Menu.csproj.GenerateResource.Cache
+F:\University\CPSC481\RESmenu-master\RESmenu-master\Drink Menu\bin\Debug\Drink Menu.exe.config
+F:\University\CPSC481\RESmenu-master\RESmenu-master\Drink Menu\obj\Debug\Drink Menu.exe
+F:\University\CPSC481\RESmenu-master\RESmenu-master\Drink Menu\obj\Debug\Drink Menu.pdb
+F:\University\CPSC481\RESmenu-master\RESmenu-master\Drink Menu\bin\Debug\pageDrink.xaml.cs
+F:\University\CPSC481\RESmenu-master\RESmenu-master\Drink Menu\bin\Debug\Drink Menu.exe
+F:\University\CPSC481\RESmenu-master\RESmenu-master\Drink Menu\bin\Debug\Drink Menu.pdb
+F:\University\CPSC481\RESmenu-master\RESmenu-master\Drink Menu\obj\Debug\Drink Menu.csprojResolveAssemblyReference.cache
+F:\University\CPSC481\RESmenu-master\RESmenu-master\Drink Menu\obj\Debug\MainWindow.g.cs
+F:\University\CPSC481\RESmenu-master\RESmenu-master\Drink Menu\obj\Debug\FoodMod.g.cs
+F:\University\CPSC481\RESmenu-master\RESmenu-master\Drink Menu\obj\Debug\DrinkAdd.g.cs
+F:\University\CPSC481\RESmenu-master\RESmenu-master\Drink Menu\obj\Debug\FoodAdd.g.cs
+F:\University\CPSC481\RESmenu-master\RESmenu-master\Drink Menu\obj\Debug\pagestake.g.cs
+F:\University\CPSC481\RESmenu-master\RESmenu-master\Drink Menu\obj\Debug\pageDrink.g.cs
+F:\University\CPSC481\RESmenu-master\RESmenu-master\Drink Menu\obj\Debug\Sides.g.cs
+F:\University\CPSC481\RESmenu-master\RESmenu-master\Drink Menu\obj\Debug\Bill.g.cs
+F:\University\CPSC481\RESmenu-master\RESmenu-master\Drink Menu\obj\Debug\App.g.cs
+F:\University\CPSC481\RESmenu-master\RESmenu-master\Drink Menu\obj\Debug\Drink Menu_MarkupCompile.cache
+F:\University\CPSC481\RESmenu-master\RESmenu-master\Drink Menu\obj\Debug\Drink Menu_MarkupCompile.lref
+F:\University\CPSC481\RESmenu-master\RESmenu-master\Drink Menu\obj\Debug\MainWindow.baml
+F:\University\CPSC481\RESmenu-master\RESmenu-master\Drink Menu\obj\Debug\FoodMod.baml
+F:\University\CPSC481\RESmenu-master\RESmenu-master\Drink Menu\obj\Debug\DrinkAdd.baml
+F:\University\CPSC481\RESmenu-master\RESmenu-master\Drink Menu\obj\Debug\FoodAdd.baml
+F:\University\CPSC481\RESmenu-master\RESmenu-master\Drink Menu\obj\Debug\pagestake.baml
+F:\University\CPSC481\RESmenu-master\RESmenu-master\Drink Menu\obj\Debug\pageDrink.baml
+F:\University\CPSC481\RESmenu-master\RESmenu-master\Drink Menu\obj\Debug\Sides.baml
+F:\University\CPSC481\RESmenu-master\RESmenu-master\Drink Menu\obj\Debug\Bill.baml
+F:\University\CPSC481\RESmenu-master\RESmenu-master\Drink Menu\obj\Debug\Drink Menu.g.resources
+F:\University\CPSC481\RESmenu-master\RESmenu-master\Drink Menu\obj\Debug\Drink_Menu.Properties.Resources.resources
+F:\University\CPSC481\RESmenu-master\RESmenu-master\Drink Menu\obj\Debug\Drink Menu.csproj.GenerateResource.Cache
